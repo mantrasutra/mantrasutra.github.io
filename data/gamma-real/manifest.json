@@ -1,0 +1,54 @@
+{
+ "id": "gamma-real",
+ "title": "Γ(x) on the real line",
+ "view": "curve",
+ "axes": [
+  {
+   "name": "क",
+   "lo": "-9/2",
+   "hi": "5",
+   "n": 381
+  }
+ ],
+ "params": null,
+ "extra": {},
+ "env": {
+  "क": [
+   "var",
+   0,
+   "m"
+  ]
+ },
+ "series": [
+  {
+   "label": "Γ(x) on the real line",
+   "file": "s0.f64",
+   "mask_file": "s0.mask",
+   "sha256": "e5331c0531f8131cc4a0b851720f0787f24a81078029cf1a006a32a6b19fcaa9",
+   "shape": [
+    381
+   ],
+   "sutra": "ळपकः के",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "-9/2",
+      "hi": "5",
+      "n": 381
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+[
+ {
+  "id": "gamma-real",
+  "title": "Γ(x) on the real line",
+  "view": "curve"
+ },
+ {
+  "id": "bessel-j",
+  "title": "Bessel Jₙ(x), n = 0…3",
+  "view": "curve"
+ },
+ {
+  "id": "lambert-w",
+  "title": "Lambert W₀ and W₋₁",
+  "view": "curve"
+ },
+ {
+  "id": "logistic",
+  "title": "Logistic growth x(t) = K / (1 + 9·e^(−r·t)), slider r",
+  "view": "curve"
+ },
+ {
+  "id": "bessel-heat",
+  "title": "J₀(√(x²+y²)), a heat map",
+  "view": "heat"
+ },
+ {
+  "id": "gamma-abs",
+  "title": "|Γ(x + iy)|, a surface over ℂ (poles clipped)",
+  "view": "surface"
+ },
+ {
+  "id": "polylog-reim",
+  "title": "Re and Im of Li₂(x + iy): two surfaces",
+  "view": "surface"
+ },
+ {
+  "id": "zeta-domain",
+  "title": "ζ(s), domain colouring (hue = arg, brightness = log|ζ| cycles)",
+  "view": "domain"
+ },
+ {
+  "id": "zeta-sphere",
+  "title": "ζ on the Riemann sphere (stereographic)",
+  "view": "sphere"
+ },
+ {
+  "id": "zeta-critical",
+  "title": "Hardy Z(t) on the critical line, zeros marked",
+  "view": "zline"
+ }
+]

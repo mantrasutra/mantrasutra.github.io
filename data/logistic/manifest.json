@@ -1,0 +1,309 @@
+{
+ "id": "logistic",
+ "title": "Logistic growth x(t) = K / (1 + 9·e^(−r·t)), slider r",
+ "view": "curve",
+ "axes": [
+  {
+   "name": "क",
+   "lo": "0",
+   "hi": "20",
+   "n": 201
+  }
+ ],
+ "params": {
+  "name": "ख",
+  "label": "r",
+  "values": [
+   "1/4",
+   "1/2",
+   "3/4",
+   "1",
+   "5/4",
+   "3/2"
+  ]
+ },
+ "extra": {},
+ "env": {
+  "क": [
+   "var",
+   0,
+   "m"
+  ],
+  "ख": [
+   "const",
+   0,
+   "m"
+  ],
+  "त": [
+   "const",
+   0,
+   "m"
+  ]
+ },
+ "series": [
+  {
+   "label": "x(t)",
+   "param_index": 0,
+   "file": "s0p0.f64",
+   "mask_file": "s0p0.mask",
+   "sha256": "720e4a05f01caae65ee2533d310fb4ca0423a5523418cbb728f8e02be7bbd60e",
+   "shape": [
+    201
+   ],
+   "sutra": "घातः २ तः घातांकः सङ्कलनस्य २ १ घातः २ ९ ळककः घाते ३ ऋणम् १ खः कः ऋणम् १",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "const",
+      0,
+      "m"
+     ],
+     "त": [
+      "const",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "0",
+      "hi": "20",
+      "n": 201
+     }
+    ],
+    "fixed": {
+     "त": "100",
+     "ख": "1/4"
+    },
+    "complex": false
+   }
+  },
+  {
+   "label": "x(t)",
+   "param_index": 1,
+   "file": "s0p1.f64",
+   "mask_file": "s0p1.mask",
+   "sha256": "d1e1f11fd0fb1677f9a5fe44b6ab8f65a2f9e81cbfa19fed1d075b12a8fa3fbc",
+   "shape": [
+    201
+   ],
+   "sutra": "घातः २ तः घातांकः सङ्कलनस्य २ १ घातः २ ९ ळककः घाते ३ ऋणम् १ खः कः ऋणम् १",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "const",
+      0,
+      "m"
+     ],
+     "त": [
+      "const",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "0",
+      "hi": "20",
+      "n": 201
+     }
+    ],
+    "fixed": {
+     "त": "100",
+     "ख": "1/2"
+    },
+    "complex": false
+   }
+  },
+  {
+   "label": "x(t)",
+   "param_index": 2,
+   "file": "s0p2.f64",
+   "mask_file": "s0p2.mask",
+   "sha256": "796809804e1be5eb8abfc26de630997a95b38a61144f19716f8d5beeea36fa81",
+   "shape": [
+    201
+   ],
+   "sutra": "घातः २ तः घातांकः सङ्कलनस्य २ १ घातः २ ९ ळककः घाते ३ ऋणम् १ खः कः ऋणम् १",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "const",
+      0,
+      "m"
+     ],
+     "त": [
+      "const",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "0",
+      "hi": "20",
+      "n": 201
+     }
+    ],
+    "fixed": {
+     "त": "100",
+     "ख": "3/4"
+    },
+    "complex": false
+   }
+  },
+  {
+   "label": "x(t)",
+   "param_index": 3,
+   "file": "s0p3.f64",
+   "mask_file": "s0p3.mask",
+   "sha256": "c10e40b8dd6bbada362326daea5dbee29e22abe30148f145172329f6938df1a2",
+   "shape": [
+    201
+   ],
+   "sutra": "घातः २ तः घातांकः सङ्कलनस्य २ १ घातः २ ९ ळककः घाते ३ ऋणम् १ खः कः ऋणम् १",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "const",
+      0,
+      "m"
+     ],
+     "त": [
+      "const",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "0",
+      "hi": "20",
+      "n": 201
+     }
+    ],
+    "fixed": {
+     "त": "100",
+     "ख": "1"
+    },
+    "complex": false
+   }
+  },
+  {
+   "label": "x(t)",
+   "param_index": 4,
+   "file": "s0p4.f64",
+   "mask_file": "s0p4.mask",
+   "sha256": "f534ba77e71e9f344a5ce2e871919f481918ae246840be74814e48511f7720d5",
+   "shape": [
+    201
+   ],
+   "sutra": "घातः २ तः घातांकः सङ्कलनस्य २ १ घातः २ ९ ळककः घाते ३ ऋणम् १ खः कः ऋणम् १",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "const",
+      0,
+      "m"
+     ],
+     "त": [
+      "const",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "0",
+      "hi": "20",
+      "n": 201
+     }
+    ],
+    "fixed": {
+     "त": "100",
+     "ख": "5/4"
+    },
+    "complex": false
+   }
+  },
+  {
+   "label": "x(t)",
+   "param_index": 5,
+   "file": "s0p5.f64",
+   "mask_file": "s0p5.mask",
+   "sha256": "d3f2cb00f81bc1c4d8e9ebe4d05b18bf87d0fa46881af0f774453816935c3714",
+   "shape": [
+    201
+   ],
+   "sutra": "घातः २ तः घातांकः सङ्कलनस्य २ १ घातः २ ९ ळककः घाते ३ ऋणम् १ खः कः ऋणम् १",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "const",
+      0,
+      "m"
+     ],
+     "त": [
+      "const",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "0",
+      "hi": "20",
+      "n": 201
+     }
+    ],
+    "fixed": {
+     "त": "100",
+     "ख": "3/2"
+    },
+    "complex": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,449 @@
+{
+ "domain": "chemistry",
+ "label": "Chemistry",
+ "engine_rev": "0a68fcbce0b92a204c8ccb428fea36edc808bae0",
+ "items": [
+  {
+   "id": "ch-arrhenius",
+   "domain": "chemistry",
+   "title": "Arrhenius rate constant",
+   "plain": "A*e^(-E/(R*T))",
+   "sutra": "घातः २ अककः घातांकः ळचखस्य घातेन ३ ऋणम् १ एकः घातांकः घातस्य २ टः ररः ऋणम् १",
+   "declarations": "प्रकरणम् अककः ळञख एकः ळञख टः ळञख ररः ळञख ।",
+   "latex": "A \\cdot e^{-\\frac{E}{T \\cdot R}}",
+   "gloss_en": "the product of A and the power, with exponent minus the product of E and the reciprocal of the product of T and R, of e",
+   "env": {
+    "अकक": [
+     "var",
+     0,
+     "m"
+    ],
+    "एक": [
+     "var",
+     0,
+     "m"
+    ],
+    "ट": [
+     "var",
+     0,
+     "m"
+    ],
+    "रर": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "A",
+     "stem": "अकक",
+     "reading": "variable"
+    },
+    {
+     "identifier": "E",
+     "stem": "एक",
+     "reading": "variable"
+    },
+    {
+     "identifier": "T",
+     "stem": "ट",
+     "reading": "variable"
+    },
+    {
+     "identifier": "R",
+     "stem": "रर",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "A": "10",
+    "E": "5",
+    "R": "2",
+    "T": "3"
+   },
+   "axis": {
+    "name": "T",
+    "lo": "1",
+    "hi": "20",
+    "n": 21
+   },
+   "legend": {
+    "A": "pre-exponential factor",
+    "E": "activation energy",
+    "R": "gas constant",
+    "T": "absolute temperature"
+   },
+   "units": "E/(R T) dimensionless; result in the unit of A",
+   "meaning": "Reaction rate constant rising steeply with temperature.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Arrhenius rate constant"
+  },
+  {
+   "id": "ch-nernst",
+   "domain": "chemistry",
+   "title": "Nernst potential",
+   "plain": "U-(R*T/(n*F))*log(Q)",
+   "sutra": "सङ्कलनम् २ उककः घातः ५ ऋणम् १ टः ररः ळखकः ककके घातांकः घातस्य २ नः फफः ऋणम् १",
+   "declarations": "प्रकरणम् उककः ळञख टः ळञख ररः ळञख कककः ळञख नः ळञख फफः ळञख ।",
+   "latex": "U -\\frac{T \\cdot R \\cdot \\log\\left(Q\\right)}{n \\cdot F}",
+   "gloss_en": "the sum of U and minus the product of T, R, the natural logarithm of Q and the reciprocal of the product of n and F",
+   "env": {
+    "उकक": [
+     "var",
+     0,
+     "m"
+    ],
+    "ट": [
+     "var",
+     0,
+     "m"
+    ],
+    "रर": [
+     "var",
+     0,
+     "m"
+    ],
+    "ककक": [
+     "var",
+     0,
+     "m"
+    ],
+    "न": [
+     "var",
+     0,
+     "m"
+    ],
+    "फफ": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "U",
+     "stem": "उकक",
+     "reading": "variable"
+    },
+    {
+     "identifier": "T",
+     "stem": "ट",
+     "reading": "variable"
+    },
+    {
+     "identifier": "R",
+     "stem": "रर",
+     "reading": "variable"
+    },
+    {
+     "identifier": "Q",
+     "stem": "ककक",
+     "reading": "variable"
+    },
+    {
+     "identifier": "n",
+     "stem": "न",
+     "reading": "variable"
+    },
+    {
+     "identifier": "F",
+     "stem": "फफ",
+     "reading": "variable"
+    },
+    {
+     "identifier": "LOG",
+     "stem": "ळखक",
+     "reading": "function"
+    }
+   ],
+   "params": {
+    "U": "3",
+    "R": "1",
+    "T": "2",
+    "n": "2",
+    "F": "5",
+    "Q": "7"
+   },
+   "axis": {
+    "name": "Q",
+    "lo": "1/10",
+    "hi": "10",
+    "n": 21
+   },
+   "legend": {
+    "U": "standard potential",
+    "R": "gas constant",
+    "T": "absolute temperature",
+    "n": "electrons transferred",
+    "F": "Faraday constant",
+    "Q": "reaction quotient"
+   },
+   "units": "volts when R T/(n F) is in volts",
+   "meaning": "Electrode potential shifted from standard by the reaction quotient.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Nernst potential"
+  },
+  {
+   "id": "ch-henderson",
+   "domain": "chemistry",
+   "title": "Henderson-Hasselbalch",
+   "plain": "p+log(b/a)/log(10)",
+   "sutra": "सङ्कलनम् २ पः घातः २ ळखकः घाते २ बः घातांकः अकस्य ऋणम् १ घातांकः ळखकस्य १० ऋणम् १",
+   "declarations": "प्रकरणम् पः ळञख बः ळञख अकः ळञख ।",
+   "latex": "p + \\frac{\\log\\left(\\frac{b}{a}\\right)}{\\log\\left(10\\right)}",
+   "gloss_en": "the sum of p and the natural logarithm of b divided by a divided by the natural logarithm of 10",
+   "env": {
+    "प": [
+     "var",
+     0,
+     "m"
+    ],
+    "ब": [
+     "var",
+     0,
+     "m"
+    ],
+    "अक": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "p",
+     "stem": "प",
+     "reading": "variable"
+    },
+    {
+     "identifier": "b",
+     "stem": "ब",
+     "reading": "variable"
+    },
+    {
+     "identifier": "a",
+     "stem": "अक",
+     "reading": "variable"
+    },
+    {
+     "identifier": "LOG",
+     "stem": "ळखक",
+     "reading": "function"
+    }
+   ],
+   "params": {
+    "p": "5",
+    "b": "2",
+    "a": "1"
+   },
+   "axis": {
+    "name": "b",
+    "lo": "1/10",
+    "hi": "10",
+    "n": 21
+   },
+   "legend": {
+    "p": "pKa",
+    "b": "base concentration",
+    "a": "acid concentration"
+   },
+   "units": "pH is dimensionless; b/a a ratio",
+   "meaning": "pH of a buffer from its base to acid ratio.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Henderson-Hasselbalch pH"
+  },
+  {
+   "id": "ch-firstorder",
+   "domain": "chemistry",
+   "title": "First-order decay",
+   "plain": "c*e^(-k*t)",
+   "sutra": "घातः २ चः घातांकः ळचखस्य घातेन ३ ऋणम् १ कः तः",
+   "declarations": "प्रकरणम् चः ळञख कः ळञख तः ळञख ।",
+   "latex": "c \\cdot e^{-k \\cdot t}",
+   "gloss_en": "the product of c and the power, with exponent minus the product of k and t, of e",
+   "env": {
+    "च": [
+     "var",
+     0,
+     "m"
+    ],
+    "क": [
+     "var",
+     0,
+     "m"
+    ],
+    "त": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "c",
+     "stem": "च",
+     "reading": "variable"
+    },
+    {
+     "identifier": "k",
+     "stem": "क",
+     "reading": "variable"
+    },
+    {
+     "identifier": "t",
+     "stem": "त",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "c": "4",
+    "k": "1/2",
+    "t": "3"
+   },
+   "axis": {
+    "name": "t",
+    "lo": "0",
+    "hi": "10",
+    "n": 21
+   },
+   "legend": {
+    "c": "initial concentration",
+    "k": "rate constant",
+    "t": "time"
+   },
+   "units": "k in 1/time; result in the unit of c",
+   "meaning": "Concentration of a species decaying at a rate proportional to itself.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "First-order decay of concentration"
+  },
+  {
+   "id": "ch-idealgas",
+   "domain": "chemistry",
+   "title": "Ideal gas law",
+   "plain": "n*R*T/V",
+   "sutra": "घातः ४ टः नः ररः घातांकः ववकस्य ऋणम् १",
+   "declarations": "प्रकरणम् टः ळञख नः ळञख ररः ळञख ववकः ळञख ।",
+   "latex": "\\frac{T \\cdot n \\cdot R}{V}",
+   "gloss_en": "the product of T, n, R and the reciprocal of V",
+   "env": {
+    "ट": [
+     "var",
+     0,
+     "m"
+    ],
+    "न": [
+     "var",
+     0,
+     "m"
+    ],
+    "रर": [
+     "var",
+     0,
+     "m"
+    ],
+    "ववक": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "T",
+     "stem": "ट",
+     "reading": "variable"
+    },
+    {
+     "identifier": "n",
+     "stem": "न",
+     "reading": "variable"
+    },
+    {
+     "identifier": "R",
+     "stem": "रर",
+     "reading": "variable"
+    },
+    {
+     "identifier": "V",
+     "stem": "ववक",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "n": "2",
+    "R": "1",
+    "T": "3",
+    "V": "4"
+   },
+   "axis": {
+    "name": "V",
+    "lo": "1",
+    "hi": "10",
+    "n": 21
+   },
+   "legend": {
+    "n": "amount of substance",
+    "R": "gas constant",
+    "T": "absolute temperature",
+    "V": "volume"
+   },
+   "units": "pressure in the unit implied by R",
+   "meaning": "Pressure of an ideal gas; P = n R T / V.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Ideal gas law, pressure"
+  },
+  {
+   "id": "ch-langmuir",
+   "domain": "chemistry",
+   "title": "Langmuir isotherm",
+   "plain": "K*p/(1+K*p)",
+   "sutra": "घातः ३ खः पः घातांकः सङ्कलनस्य २ १ घातः २ खः पः ऋणम् १",
+   "declarations": "प्रकरणम् खः ळञख पः ळञख ।",
+   "latex": "\\frac{K \\cdot p}{1 + K \\cdot p}",
+   "gloss_en": "the product of K, p and the reciprocal of the sum of 1 and the product of K and p",
+   "env": {
+    "ख": [
+     "var",
+     0,
+     "m"
+    ],
+    "प": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "K",
+     "stem": "ख",
+     "reading": "variable"
+    },
+    {
+     "identifier": "p",
+     "stem": "प",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "K": "2",
+    "p": "3"
+   },
+   "axis": {
+    "name": "p",
+    "lo": "0",
+    "hi": "10",
+    "n": 21
+   },
+   "legend": {
+    "K": "adsorption equilibrium constant",
+    "p": "gas pressure"
+   },
+   "units": "coverage fraction, dimensionless; K p dimensionless",
+   "meaning": "Fractional surface coverage saturating at 1.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Langmuir adsorption isotherm"
+  }
+ ]
+}

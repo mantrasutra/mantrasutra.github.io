@@ -1,55 +1,17 @@
 <!doctype html>
-<!-- SPDX-License-Identifier: AGPL-3.0-only -->
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>सूत्रम् (Sūtra)</title>
-<meta name="description" content="Sūtra: an engine that reads classical Sanskrit mathematical rules as typed terms and evaluates them with certified precision.">
-<link rel="icon" href="data:,">
-<style>
-  :root { --bg:#f6f3ec; --fg:#1d1b18; --muted:#6b655c; --line:#d8d1c4; --accent:#a63a21; --panel:#fffdf8; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#16140f; --fg:#ece6da; --muted:#a39b8d; --line:#36312a; --accent:#e07a5f; --panel:#1f1c16; } }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,"Noto Sans Devanagari",sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:24px 16px 48px; }
-  h1 { font-size:34px; margin:0 0 4px; }
-  h2 { font-size:20px; margin:32px 0 8px; border-bottom:1px solid var(--line); padding-bottom:4px; }
-  p.lead { color:var(--muted); margin:0 0 16px; }
-  a { color:var(--accent); }
-  table { border-collapse:collapse; width:100%; background:var(--panel); font-size:14px; }
-  th,td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; overflow-wrap:anywhere; }
-  code { font:13px ui-monospace,monospace; }
-  footer { color:var(--muted); font-size:14px; margin-top:32px; border-top:1px solid var(--line); padding-top:12px; }
-</style>
-</head>
-<body>
-<main>
-<h1>सूत्रम्</h1>
-<p class="lead">Sūtra: classical Sanskrit mathematical rules, read as typed terms and evaluated with certified precision.</p>
-
-<h2>What it is</h2>
-<p>Sūtra is an engine and a set of browser viewers. It takes a rule written as a sūtra document, parses it into a canonical term, and evaluates the term to a requested number of digits, reporting the digits it can certify. It also converts a term back to the sūtra text, and to LaTeX and an English gloss. The viewers plot a function and its sūtra side by side and edit formulas.</p>
-<p>A second line of work analyses Sanskrit verse (word segmentation, metre, accent, number-words). It exists as a design and as registered tests with their recorded results; see below for its status.</p>
-
-<h2>What was measured</h2>
-<p>Each figure below comes from a result file in the repository. Every test was registered before it was run, and failures are reported.</p>
-<table>
-<tr><th>Test</th><th>Result</th><th>Source file</th></tr>
-<tr><td>N1: numerical accuracy of the engine against an mpmath reference, 176 points (30-digit value, reported error bound, binary64 sample path)</td><td>176/176 on each path</td><td><code>docs/N1-result.json</code>, <code>docs/N1-registration.md</code></td></tr>
-<tr><td>B3 (a): reproduce every printed number of 53 worked examples from classical texts (e.g. the Līlāvatī)</td><td>34/53 (64.2%). FAIL against the registered 95% bar</td><td><code>docs/B3-result.md</code></td></tr>
-<tr><td>B3: round trip sūtra text, parse, emit, equal to the text, on the 49 mapped rows</td><td>49/49</td><td><code>docs/B3-result.md</code></td></tr>
-<tr><td>B3 (b): fidelity of the rule, scored by two LLM raters against a rubric, 39 items</td><td>38/41 reported by the file; FAIL against the 95% bar</td><td><code>docs/B3-result.md</code></td></tr>
-</table>
-<p><strong>Limits.</strong> The N1 reference is mpmath, and the engine itself evaluates with a vendored mpmath 1.3.0, so N1 tests the engine's term handling and error bounds, not mpmath. The N1 result was recorded before later engine fixes; it has not been re-run since. B3 failed overall: four examples need a data-dependent loop the engine cannot express, and nine failures come from numbers the blind mapping left out.</p>
-
-<h2>Sources and licences</h2>
-<p>Corpus and data licences are recorded per source in <code>docs/LICENCES.md</code>. Non-commercial corpora are excluded. The attested lexicon uses the Digital Corpus of Sanskrit (CC BY 4.0) and the Cologne Digital Sanskrit Dictionaries (CC BY-SA 4.0, a derived work that is not AGPL). Vendored third-party files keep their own licences, listed in <code>NOTICE</code>.</p>
-
-<h2>Licence</h2>
-<p>AGPL-3.0-only (see <a href="LICENSE">LICENSE</a>). A commercial licence is available from the copyright holder, परमतत्व: <a href="COMMERCIAL-LICENSE.md">COMMERCIAL-LICENSE.md</a>. Copyright (c) 2026 परमतत्व.</p>
-
-<footer>This page is static, loads nothing from other sites and sets no cookies. Organisation: <a href="https://github.com/mantrasutra">github.com/mantrasutra</a>.</footer>
-</main>
-</body>
-</html>
+<html lang="en"><head><title>सूत्र</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="css/site.css">
+<meta name="description" content="Sutra strings and closed-form functions, both directions, computed in your browser.">
+</head><body data-page="index"><div id="site-header"></div>
+<main id="main">
+<h1>सूत्र</h1>
+<p>सूत्र is a compact string notation for closed-form functions, with a two-way map: a string gives a function, and a function in a supported form gives its canonical string. The map is between strings and a countable term algebra, not all analytic functions. Unsupported or malformed input gets a named refusal, never a guess.</p>
+<p>Everything runs in your browser on the same Python engine the project tests against. First load downloads about 25 MB; after that the site makes no other network request.</p>
+<ul class="cards">
+<li><a href="editor.html">Editor</a><br>Write a string or a formula; see the parsed term and its value.</li>
+<li><a href="functions.html">Functions</a><br>Domain packs of textbook formulas, as strings.</li>
+<li><a href="explorer.html">Explorer</a><br>Surfaces and curves of functions.</li>
+<li><a href="mantra.html">Mantra</a><br>Verse analysis: text, prosody, structure.</li>
+</ul>
+<p class="note">Page names and pack titles are English placeholders until the owner rules the Devanagari names. Read <a href="about.html">About</a> for what is and is not claimed.</p>
+</main><div id="site-footer"></div>
+<script type="module" src="js/nav.mjs"></script></body></html>

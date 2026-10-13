@@ -1,0 +1,84 @@
+{
+ "id": "lambert-w",
+ "title": "Lambert W₀ and W₋₁",
+ "view": "curve",
+ "axes": [
+  {
+   "name": "क",
+   "lo": "-3678/10000",
+   "hi": "3",
+   "n": 337
+  }
+ ],
+ "params": null,
+ "extra": {},
+ "env": {
+  "क": [
+   "var",
+   0,
+   "m"
+  ]
+ },
+ "series": [
+  {
+   "label": "W₀",
+   "file": "s0.f64",
+   "mask_file": "s0.mask",
+   "sha256": "676c39272425c62480a7c5596d66e13e457cf7e37a8fd0a7038cd31e38bb523b",
+   "shape": [
+    337
+   ],
+   "sutra": "ळयकः के",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "-3678/10000",
+      "hi": "3",
+      "n": 337
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   }
+  },
+  {
+   "label": "W₋₁",
+   "file": "s1.f64",
+   "mask_file": "s1.mask",
+   "sha256": "baba47258fdde2610c8efc5e1dd454c5ddee73dcdc87bd75d3d079ca40c93ed1",
+   "shape": [
+    337
+   ],
+   "sutra": "ळलकः के",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "-3678/10000",
+      "hi": "3",
+      "n": 337
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   }
+  }
+ ]
+}

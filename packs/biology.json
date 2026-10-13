@@ -1,0 +1,379 @@
+{
+ "domain": "biology",
+ "label": "Biology",
+ "engine_rev": "0a68fcbce0b92a204c8ccb428fea36edc808bae0",
+ "items": [
+  {
+   "id": "bi-logistic",
+   "domain": "biology",
+   "title": "Logistic growth",
+   "plain": "K/(1+(K/N-1)*e^(-r*t))",
+   "sutra": "घातः २ खः घातांकः सङ्कलनस्य २ १ घातः २ घातांकः ळचखस्य घातेन ३ ऋणम् १ तः रः सङ्कलनम् २ ऋणम् १ घातः २ खः घातांकः णस्य ऋणम् १ ऋणम् १",
+   "declarations": "प्रकरणम् खः ळञख तः ळञख रः ळञख णः ळञख ।",
+   "latex": "\\frac{K}{1 + e^{-t \\cdot r} \\cdot \\left(-1 + \\frac{K}{N}\\right)}",
+   "gloss_en": "K divided by the sum of 1 and the product of the power, with exponent minus the product of t and r, of e and the sum of minus 1 and K divided by N",
+   "env": {
+    "ख": [
+     "var",
+     0,
+     "m"
+    ],
+    "त": [
+     "var",
+     0,
+     "m"
+    ],
+    "र": [
+     "var",
+     0,
+     "m"
+    ],
+    "ण": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "K",
+     "stem": "ख",
+     "reading": "variable"
+    },
+    {
+     "identifier": "t",
+     "stem": "त",
+     "reading": "variable"
+    },
+    {
+     "identifier": "r",
+     "stem": "र",
+     "reading": "variable"
+    },
+    {
+     "identifier": "N",
+     "stem": "ण",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "K": "100",
+    "N": "5",
+    "r": "1/2",
+    "t": "4"
+   },
+   "axis": {
+    "name": "t",
+    "lo": "0",
+    "hi": "20",
+    "n": 21
+   },
+   "legend": {
+    "K": "carrying capacity",
+    "N": "initial population",
+    "r": "growth rate",
+    "t": "time"
+   },
+   "units": "population units; r in 1/time",
+   "meaning": "Population growing to a carrying capacity in an S-shaped curve.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Logistic population growth"
+  },
+  {
+   "id": "bi-michaelis",
+   "domain": "biology",
+   "title": "Michaelis-Menten rate",
+   "plain": "V*S/(K+S)",
+   "sutra": "घातः ३ ववकः शः घातांकः सङ्कलनस्य २ खः शः ऋणम् १",
+   "declarations": "प्रकरणम् ववकः ळञख शः ळञख खः ळञख ।",
+   "latex": "\\frac{V \\cdot S}{K + S}",
+   "gloss_en": "the product of V, S and the reciprocal of the sum of K and S",
+   "env": {
+    "ववक": [
+     "var",
+     0,
+     "m"
+    ],
+    "श": [
+     "var",
+     0,
+     "m"
+    ],
+    "ख": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "V",
+     "stem": "ववक",
+     "reading": "variable"
+    },
+    {
+     "identifier": "S",
+     "stem": "श",
+     "reading": "variable"
+    },
+    {
+     "identifier": "K",
+     "stem": "ख",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "V": "10",
+    "S": "3",
+    "K": "2"
+   },
+   "axis": {
+    "name": "S",
+    "lo": "0",
+    "hi": "20",
+    "n": 21
+   },
+   "legend": {
+    "V": "maximum rate",
+    "S": "substrate concentration",
+    "K": "Michaelis constant"
+   },
+   "units": "rate units; S and K same concentration unit",
+   "meaning": "Enzyme reaction rate saturating at V.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Michaelis-Menten rate"
+  },
+  {
+   "id": "bi-hill",
+   "domain": "biology",
+   "title": "Hill equation, n = 2",
+   "plain": "S^2/(K^2+S^2)",
+   "sutra": "घातः २ घातांकः शस्य २ घातांकः सङ्कलनस्य २ घातांकः खस्य २ घातांकः शस्य २ ऋणम् १",
+   "declarations": "प्रकरणम् शः ळञख खः ळञख ।",
+   "latex": "\\frac{S^{2}}{K^{2} + S^{2}}",
+   "gloss_en": "the square of S divided by the sum of the square of K and the square of S",
+   "env": {
+    "श": [
+     "var",
+     0,
+     "m"
+    ],
+    "ख": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "S",
+     "stem": "श",
+     "reading": "variable"
+    },
+    {
+     "identifier": "K",
+     "stem": "ख",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "S": "3",
+    "K": "2"
+   },
+   "axis": {
+    "name": "S",
+    "lo": "0",
+    "hi": "10",
+    "n": 21
+   },
+   "legend": {
+    "S": "ligand concentration",
+    "K": "half-saturation constant"
+   },
+   "units": "fraction bound, dimensionless",
+   "meaning": "Cooperative binding with Hill coefficient 2.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Hill equation, n = 2"
+  },
+  {
+   "id": "bi-gompertz",
+   "domain": "biology",
+   "title": "Gompertz growth",
+   "plain": "K*e^(-b*e^(-c*t))",
+   "sutra": "घातः २ खः घातांकः ळचखस्य घातेन ३ ऋणम् १ बः घातांकः ळचखस्य घातेन ३ ऋणम् १ चः तः",
+   "declarations": "प्रकरणम् खः ळञख बः ळञख चः ळञख तः ळञख ।",
+   "latex": "K \\cdot e^{-b \\cdot e^{-c \\cdot t}}",
+   "gloss_en": "the product of K and the power, with exponent minus the product of b and the power, with exponent minus the product of c and t, of e, of e",
+   "env": {
+    "ख": [
+     "var",
+     0,
+     "m"
+    ],
+    "ब": [
+     "var",
+     0,
+     "m"
+    ],
+    "च": [
+     "var",
+     0,
+     "m"
+    ],
+    "त": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "K",
+     "stem": "ख",
+     "reading": "variable"
+    },
+    {
+     "identifier": "b",
+     "stem": "ब",
+     "reading": "variable"
+    },
+    {
+     "identifier": "c",
+     "stem": "च",
+     "reading": "variable"
+    },
+    {
+     "identifier": "t",
+     "stem": "त",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "K": "50",
+    "b": "2",
+    "c": "1/2",
+    "t": "3"
+   },
+   "axis": {
+    "name": "t",
+    "lo": "0",
+    "hi": "15",
+    "n": 21
+   },
+   "legend": {
+    "K": "asymptote",
+    "b": "displacement",
+    "c": "growth rate",
+    "t": "time"
+   },
+   "units": "K in population units; c in 1/time",
+   "meaning": "Asymmetric sigmoid growth used for tumours and populations.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Gompertz growth"
+  },
+  {
+   "id": "bi-hardyweinberg",
+   "domain": "biology",
+   "title": "Hardy-Weinberg heterozygotes",
+   "plain": "2*p*(1-p)",
+   "sutra": "घातः ३ २ पः सङ्कलनम् २ १ घातः २ ऋणम् १ पः",
+   "declarations": "प्रकरणम् पः ळञख ।",
+   "latex": "2 \\cdot p \\cdot \\left(1 -p\\right)",
+   "gloss_en": "the product of 2, p and the sum of 1 and minus p",
+   "env": {
+    "प": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "p",
+     "stem": "प",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "p": "1/3"
+   },
+   "axis": {
+    "name": "p",
+    "lo": "0",
+    "hi": "1",
+    "n": 21
+   },
+   "legend": {
+    "p": "allele frequency"
+   },
+   "units": "frequency, dimensionless, 0 to 1",
+   "meaning": "Expected heterozygote frequency 2 p (1-p) in an ideal population.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Hardy-Weinberg heterozygote frequency"
+  },
+  {
+   "id": "bi-expgrowth",
+   "domain": "biology",
+   "title": "Exponential growth",
+   "plain": "N*e^(r*t)",
+   "sutra": "घातः २ णः घातांकः ळचखस्य घातेन २ तः रः",
+   "declarations": "प्रकरणम् णः ळञख तः ळञख रः ळञख ।",
+   "latex": "N \\cdot e^{t \\cdot r}",
+   "gloss_en": "the product of N and the power, with exponent the product of t and r, of e",
+   "env": {
+    "ण": [
+     "var",
+     0,
+     "m"
+    ],
+    "त": [
+     "var",
+     0,
+     "m"
+    ],
+    "र": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "N",
+     "stem": "ण",
+     "reading": "variable"
+    },
+    {
+     "identifier": "t",
+     "stem": "त",
+     "reading": "variable"
+    },
+    {
+     "identifier": "r",
+     "stem": "र",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "N": "3",
+    "r": "1/5",
+    "t": "5"
+   },
+   "axis": {
+    "name": "t",
+    "lo": "0",
+    "hi": "10",
+    "n": 21
+   },
+   "legend": {
+    "N": "initial population",
+    "r": "growth rate",
+    "t": "time"
+   },
+   "units": "population units; r in 1/time",
+   "meaning": "Unbounded growth at a constant relative rate.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Exponential growth"
+  }
+ ]
+}

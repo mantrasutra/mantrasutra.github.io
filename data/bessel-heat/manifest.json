@@ -1,0 +1,77 @@
+{
+ "id": "bessel-heat",
+ "title": "J₀(√(x²+y²)), a heat map",
+ "view": "heat",
+ "axes": [
+  {
+   "name": "क",
+   "lo": "-15",
+   "hi": "15",
+   "n": 121
+  },
+  {
+   "name": "ख",
+   "lo": "-15",
+   "hi": "15",
+   "n": 121
+  }
+ ],
+ "params": null,
+ "extra": {},
+ "env": {
+  "क": [
+   "var",
+   0,
+   "m"
+  ],
+  "ख": [
+   "var",
+   0,
+   "m"
+  ]
+ },
+ "series": [
+  {
+   "label": "J₀(√(x²+y²)), a heat map",
+   "file": "s0.f64",
+   "mask_file": "s0.mask",
+   "sha256": "8c9525f06dad6db083eed4e24c701098a84ee6c616bde4b92897cdc6827a8ee6",
+   "shape": [
+    121,
+    121
+   ],
+   "sutra": "ळवकः ० घातांके सङ्कलनस्य २ घातांकः कस्य २ घातांकः खस्य २ १⁄२",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "-15",
+      "hi": "15",
+      "n": 121
+     },
+     {
+      "name": "ख",
+      "lo": "-15",
+      "hi": "15",
+      "n": 121
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   }
+  }
+ ]
+}

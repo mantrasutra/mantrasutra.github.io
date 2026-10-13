@@ -1,0 +1,348 @@
+{
+ "domain": "physics",
+ "label": "Physics",
+ "engine_rev": "0a68fcbce0b92a204c8ccb428fea36edc808bae0",
+ "items": [
+  {
+   "id": "ph-boltzmann",
+   "domain": "physics",
+   "title": "Boltzmann factor",
+   "plain": "e^(-E/(k*T))",
+   "sutra": "घातांकः ळचखस्य घातेन ३ ऋणम् १ एकः घातांकः घातस्य २ कः टः ऋणम् १",
+   "declarations": "प्रकरणम् एकः ळञख कः ळञख टः ळञख ।",
+   "latex": "e^{-\\frac{E}{k \\cdot T}}",
+   "gloss_en": "the power, with exponent minus the product of E and the reciprocal of the product of k and T, of e",
+   "env": {
+    "एक": [
+     "var",
+     0,
+     "m"
+    ],
+    "क": [
+     "var",
+     0,
+     "m"
+    ],
+    "ट": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "E",
+     "stem": "एक",
+     "reading": "variable"
+    },
+    {
+     "identifier": "k",
+     "stem": "क",
+     "reading": "variable"
+    },
+    {
+     "identifier": "T",
+     "stem": "ट",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "E": "2",
+    "k": "1",
+    "T": "4"
+   },
+   "axis": {
+    "name": "T",
+    "lo": "1",
+    "hi": "10",
+    "n": 21
+   },
+   "legend": {
+    "E": "energy of the state",
+    "k": "Boltzmann constant",
+    "T": "absolute temperature"
+   },
+   "units": "E and kT in the same energy unit; result dimensionless",
+   "meaning": "Relative occupation of a state of energy E at temperature T.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Boltzmann factor (relative occupation)"
+  },
+  {
+   "id": "ph-planck",
+   "domain": "physics",
+   "title": "Planck spectral shape",
+   "plain": "x^3/(e^x-1)",
+   "sutra": "घातः २ घातांकः क्षस्य ३ घातांकः सङ्कलनस्य २ ऋणम् १ घातांकः ळचखस्य क्षेण ऋणम् १",
+   "declarations": "प्रकरणम् क्षः ळञख ।",
+   "latex": "\\frac{x^{3}}{-1 + e^{x}}",
+   "gloss_en": "the cube of x divided by the sum of minus 1 and the power, with exponent x, of e",
+   "env": {
+    "क्ष": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "x",
+     "stem": "क्ष",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "x": "3"
+   },
+   "axis": {
+    "name": "x",
+    "lo": "1/2",
+    "hi": "10",
+    "n": 21
+   },
+   "legend": {
+    "x": "h*nu/(k*T), dimensionless"
+   },
+   "units": "dimensionless",
+   "meaning": "Shape of the Planck spectrum in the reduced variable x; peaks near x of about 2.82.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Planck law, dimensionless spectral shape"
+  },
+  {
+   "id": "ph-lorentz",
+   "domain": "physics",
+   "title": "Lorentz factor",
+   "plain": "1/sqrt(1-v^2)",
+   "sutra": "घातांकः घातांकस्य सङ्कलनस्य २ १ घातः २ ऋणम् १ घातांकः वस्य २ १⁄२ ऋणम् १",
+   "declarations": "प्रकरणम् वः ळञख ।",
+   "latex": "\\frac{1}{\\sqrt{1 -v^{2}}}",
+   "gloss_en": "the reciprocal of the square root of the sum of 1 and minus the square of v",
+   "env": {
+    "व": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "v",
+     "stem": "व",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "v": "3/5"
+   },
+   "axis": {
+    "name": "v",
+    "lo": "0",
+    "hi": "9/10",
+    "n": 21
+   },
+   "legend": {
+    "v": "speed in units of c"
+   },
+   "units": "dimensionless, v < 1",
+   "meaning": "Time dilation and length contraction factor; diverges as v approaches 1.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Lorentz factor, v in units of c"
+  },
+  {
+   "id": "ph-coulomb",
+   "domain": "physics",
+   "title": "Inverse-square force",
+   "plain": "k*q*Q/r^2",
+   "sutra": "घातः ४ कः ककः कककः घातांकः घातांकस्य रस्य २ ऋणम् १",
+   "declarations": "प्रकरणम् कः ळञख ककः ळञख कककः ळञख रः ळञख ।",
+   "latex": "\\frac{k \\cdot q \\cdot Q}{r^{2}}",
+   "gloss_en": "the product of k, q, Q and the reciprocal of the square of r",
+   "env": {
+    "क": [
+     "var",
+     0,
+     "m"
+    ],
+    "कक": [
+     "var",
+     0,
+     "m"
+    ],
+    "ककक": [
+     "var",
+     0,
+     "m"
+    ],
+    "र": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "k",
+     "stem": "क",
+     "reading": "variable"
+    },
+    {
+     "identifier": "q",
+     "stem": "कक",
+     "reading": "variable"
+    },
+    {
+     "identifier": "Q",
+     "stem": "ककक",
+     "reading": "variable"
+    },
+    {
+     "identifier": "r",
+     "stem": "र",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "k": "1",
+    "q": "2",
+    "Q": "3",
+    "r": "2"
+   },
+   "axis": {
+    "name": "r",
+    "lo": "1/2",
+    "hi": "5",
+    "n": 21
+   },
+   "legend": {
+    "k": "coupling constant",
+    "q": "first charge (or mass)",
+    "Q": "second charge (or mass)",
+    "r": "separation"
+   },
+   "units": "force = k q Q / r^2 in consistent units",
+   "meaning": "Coulomb force (Newton gravity has the same form with a sign).",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Inverse-square force (Newton, Coulomb)"
+  },
+  {
+   "id": "ph-oscillator",
+   "domain": "physics",
+   "title": "Harmonic oscillator",
+   "plain": "A*cos(w*t)",
+   "sutra": "घातः २ अककः ळघकः घाते २ तः ववः",
+   "declarations": "प्रकरणम् अककः ळञख तः ळञख ववः ळञख ।",
+   "latex": "A \\cdot \\cos\\left(t \\cdot w\\right)",
+   "gloss_en": "the product of A and the cosine of the product of t and w",
+   "env": {
+    "अकक": [
+     "var",
+     0,
+     "m"
+    ],
+    "त": [
+     "var",
+     0,
+     "m"
+    ],
+    "वव": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "A",
+     "stem": "अकक",
+     "reading": "variable"
+    },
+    {
+     "identifier": "t",
+     "stem": "त",
+     "reading": "variable"
+    },
+    {
+     "identifier": "w",
+     "stem": "वव",
+     "reading": "variable"
+    },
+    {
+     "identifier": "COS",
+     "stem": "ळघक",
+     "reading": "function"
+    }
+   ],
+   "params": {
+    "A": "2",
+    "w": "3",
+    "t": "1/2"
+   },
+   "axis": {
+    "name": "t",
+    "lo": "0",
+    "hi": "6",
+    "n": 21
+   },
+   "legend": {
+    "A": "amplitude",
+    "w": "angular frequency",
+    "t": "time"
+   },
+   "units": "A in length, w in 1/time, t in time",
+   "meaning": "Displacement of an undamped oscillator started at its maximum.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Harmonic oscillator displacement"
+  },
+  {
+   "id": "ph-gauss",
+   "domain": "physics",
+   "title": "Gaussian envelope",
+   "plain": "e^(-x^2/(2*s^2))",
+   "sutra": "घातांकः ळचखस्य घातेन ३ ऋणम् १ घातांकः क्षस्य २ घातांकः घातस्य २ २ घातांकः सस्य २ ऋणम् १",
+   "declarations": "प्रकरणम् क्षः ळञख सः ळञख ।",
+   "latex": "e^{-\\frac{x^{2}}{2 \\cdot s^{2}}}",
+   "gloss_en": "the power, with exponent minus the product of the square of x and the reciprocal of the product of 2 and the square of s, of e",
+   "env": {
+    "क्ष": [
+     "var",
+     0,
+     "m"
+    ],
+    "स": [
+     "var",
+     0,
+     "m"
+    ]
+   },
+   "resolved": [
+    {
+     "identifier": "x",
+     "stem": "क्ष",
+     "reading": "variable"
+    },
+    {
+     "identifier": "s",
+     "stem": "स",
+     "reading": "variable"
+    }
+   ],
+   "params": {
+    "x": "1",
+    "s": "2"
+   },
+   "axis": {
+    "name": "x",
+    "lo": "-5",
+    "hi": "5",
+    "n": 21
+   },
+   "legend": {
+    "x": "position",
+    "s": "width (standard deviation)"
+   },
+   "units": "x and s in the same length unit",
+   "meaning": "Unnormalised Gaussian wave-packet envelope.",
+   "status": "physical commentary illustrative, not engine-verified; title is a proposal pending owner ruling",
+   "oracle_note": "Gaussian wave-packet envelope"
+  }
+ ]
+}

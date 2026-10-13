@@ -1,0 +1,73 @@
+{
+ "id": "zeta-domain",
+ "title": "ζ(s), domain colouring (hue = arg, brightness = log|ζ| cycles)",
+ "view": "domain",
+ "axes": [
+  {
+   "name": "ग",
+   "lo": "-14",
+   "hi": "6",
+   "n": 201,
+   "complex_part": "re"
+  },
+  {
+   "name": "ग",
+   "lo": "-30",
+   "hi": "30",
+   "n": 301,
+   "complex_part": "im"
+  }
+ ],
+ "params": null,
+ "extra": {},
+ "env": {
+  "ग": [
+   "var",
+   0,
+   "m"
+  ]
+ },
+ "series": [
+  {
+   "label": "ζ(s), domain colouring (hue = arg, brightness = log|ζ| cycles)",
+   "file": "s0.f64",
+   "mask_file": "s0.mask",
+   "sha256": "5f3e0d6517f2fbb840dc64bad7d7e61403b3e3fade0c71cca740d5d771fb52a7",
+   "shape": [
+    201,
+    301
+   ],
+   "sutra": "ळफकः गे",
+   "request": {
+    "op": "sample",
+    "env": {
+     "ग": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "ग",
+      "lo": "-14",
+      "hi": "6",
+      "n": 201,
+      "complex_part": "re"
+     },
+     {
+      "name": "ग",
+      "lo": "-30",
+      "hi": "30",
+      "n": 301,
+      "complex_part": "im"
+     }
+    ],
+    "fixed": {},
+    "complex": true
+   },
+   "im_file": "s0.im.f64",
+   "im_sha256": "3d26cf0a2fac19edecd5ac7cbeb673afc595a5300675e2c2a553bc5eb150ac09"
+  }
+ ]
+}

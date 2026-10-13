@@ -1,0 +1,177 @@
+{
+ "id": "bessel-j",
+ "title": "Bessel Jₙ(x), n = 0…3",
+ "view": "curve",
+ "axes": [
+  {
+   "name": "क",
+   "lo": "0",
+   "hi": "20",
+   "n": 401
+  }
+ ],
+ "params": null,
+ "extra": {},
+ "env": {
+  "क": [
+   "var",
+   0,
+   "m"
+  ],
+  "ख": [
+   "var",
+   0,
+   "m"
+  ]
+ },
+ "series": [
+  {
+   "label": "J0",
+   "file": "s0.f64",
+   "mask_file": "s0.mask",
+   "sha256": "28b57ce158d96c07ae0827a488809770a01f8cdbc3f74d4c8ac33f74d8086c3f",
+   "shape": [
+    401
+   ],
+   "sutra": "ळवकः खे के",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "0",
+      "hi": "20",
+      "n": 401
+     }
+    ],
+    "fixed": {
+     "ख": "0"
+    },
+    "complex": false
+   }
+  },
+  {
+   "label": "J1",
+   "file": "s1.f64",
+   "mask_file": "s1.mask",
+   "sha256": "22363034d3e64b443a8db3690b97a3b087f58d7032b47333bf0fb3692bf6167e",
+   "shape": [
+    401
+   ],
+   "sutra": "ळवकः खे के",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "0",
+      "hi": "20",
+      "n": 401
+     }
+    ],
+    "fixed": {
+     "ख": "1"
+    },
+    "complex": false
+   }
+  },
+  {
+   "label": "J2",
+   "file": "s2.f64",
+   "mask_file": "s2.mask",
+   "sha256": "9f1464e70892b89370251b86c873536e349533e1b83cbb4fa96fe066e6f80892",
+   "shape": [
+    401
+   ],
+   "sutra": "ळवकः खे के",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "0",
+      "hi": "20",
+      "n": 401
+     }
+    ],
+    "fixed": {
+     "ख": "2"
+    },
+    "complex": false
+   }
+  },
+  {
+   "label": "J3",
+   "file": "s3.f64",
+   "mask_file": "s3.mask",
+   "sha256": "c4d05178a9cc8eb282ea56c7aeaff61012ab7ff0ed5ba39df5dab65e1125e1ca",
+   "shape": [
+    401
+   ],
+   "sutra": "ळवकः खे के",
+   "request": {
+    "op": "sample",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "0",
+      "hi": "20",
+      "n": 401
+     }
+    ],
+    "fixed": {
+     "ख": "3"
+    },
+    "complex": false
+   }
+  }
+ ]
+}

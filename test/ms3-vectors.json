@@ -1,0 +1,8645 @@
+{
+ "engine_rev": "0a68fcbce0b92a204c8ccb428fea36edc808bae0",
+ "engine_path": "sutra-wt-designa/oracle",
+ "generator": "ms3/gen.py",
+ "note": "want = request(req) output; bytes fields replaced by sha256+len. refusal rows have want.ok false.",
+ "cases": [
+  {
+   "id": "in-plain-00",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "x^2/(1+e^x)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ घातांकः क्षस्य २ घातांकः सङ्कलनस्य २ १ घातांकः ळचखस्य क्षेण ऋणम् १",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\frac{x^{2}}{1 + e^{x}}",
+    "gloss_en": "the square of x divided by the sum of 1 and the power, with exponent x, of e",
+    "gloss_sa": "(क्षस्य (२) इत्यनेन घातांकेन घातः), ((१, (ळचखस्य क्षेण घातांकेन घातः) च — एषां सङ्कलनम्) इत्यस्य व्युत्क्रमः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-plain-01",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "x^2+y^2",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "सङ्कलनम् २ घातांकः क्षस्य २ घातांकः यस्य २",
+    "declarations": "प्रकरणम् क्षः ळञख यः ळञख ।",
+    "latex": "x^{2} + y^{2}",
+    "gloss_en": "the sum of the square of x and the square of y",
+    "gloss_sa": "(क्षस्य (२) इत्यनेन घातांकेन घातः), (यस्य (२) इत्यनेन घातांकेन घातः) च — एषां सङ्कलनम्",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     },
+     {
+      "identifier": "y",
+      "stem": "य",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ],
+     "य": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x",
+     "y"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-plain-02",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "sin(x)*cos(x)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ ळगकः क्षे ळघकः क्षे",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\sin\\left(x\\right) \\cdot \\cos\\left(x\\right)",
+    "gloss_en": "the product of the sine of x and the cosine of x",
+    "gloss_sa": "(क्षे ळगकमानम्), (क्षे ळघकमानम्) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     },
+     {
+      "identifier": "SIN",
+      "stem": "ळगक",
+      "reading": "function"
+     },
+     {
+      "identifier": "COS",
+      "stem": "ळघक",
+      "reading": "function"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-plain-03",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "e^(-x^2)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः ळचखस्य घातेन २ ऋणम् १ घातांकः क्षस्य २",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "e^{-x^{2}}",
+    "gloss_en": "the power, with exponent minus the square of x, of e",
+    "gloss_sa": "ळचखस्य ((क्षस्य (२) इत्यनेन घातांकेन घातः) इत्यस्य ऋणम्) इत्यनेन घातांकेन घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-plain-04",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "1/(1+x^2)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः सङ्कलनस्य २ १ घातांकः क्षस्य २ ऋणम् १",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\frac{1}{1 + x^{2}}",
+    "gloss_en": "the reciprocal of the sum of 1 and the square of x",
+    "gloss_sa": "(१, (क्षस्य (२) इत्यनेन घातांकेन घातः) च — एषां सङ्कलनम्) इत्यस्य व्युत्क्रमः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-plain-05",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "x^3-2*x+1",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "सङ्कलनम् ३ १ घातांकः क्षस्य ३ घातः २ ऋणम् २ क्षः",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "1 + x^{3} -2 \\cdot x",
+    "gloss_en": "the sum of 1, the cube of x and the product of minus 2 and x",
+    "gloss_sa": "१, (क्षस्य (३) इत्यनेन घातांकेन घातः), (ऋणम् २, क्षः च — एषां घातः) च — एषां सङ्कलनम्",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-plain-06",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "sqrt(x)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः क्षस्य १⁄२",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\sqrt{x}",
+    "gloss_en": "the square root of x",
+    "gloss_sa": "क्षस्य वर्गमूलम्",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-plain-07",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "log(x)/x",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ ळखकः क्षे घातांकः क्षस्य ऋणम् १",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\frac{\\log\\left(x\\right)}{x}",
+    "gloss_en": "the natural logarithm of x divided by x",
+    "gloss_sa": "(क्षे ळखकमानम्), (क्षस्य व्युत्क्रमः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     },
+     {
+      "identifier": "LOG",
+      "stem": "ळखक",
+      "reading": "function"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-plain-08",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "gamma(x)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः ४ क्षः गः घातांकः अकस्य २ घातांकः मस्य २",
+    "declarations": "प्रकरणम् क्षः ळञख गः ळञख अकः ळञख मः ळञख ।",
+    "latex": "x \\cdot g \\cdot a^{2} \\cdot m^{2}",
+    "gloss_en": "the product of x, g, the square of a and the square of m",
+    "gloss_sa": "क्षः, गः, (अकस्य (२) इत्यनेन घातांकेन घातः), (मस्य (२) इत्यनेन घातांकेन घातः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     },
+     {
+      "identifier": "g",
+      "stem": "ग",
+      "reading": "variable"
+     },
+     {
+      "identifier": "a",
+      "stem": "अक",
+      "reading": "variable"
+     },
+     {
+      "identifier": "m",
+      "stem": "म",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ],
+     "ग": [
+      "var",
+      0,
+      "m"
+     ],
+     "अक": [
+      "var",
+      0,
+      "m"
+     ],
+     "म": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x",
+     "g",
+     "a",
+     "m"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-plain-09",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "2*x+3",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "सङ्कलनम् २ ३ घातः २ २ क्षः",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "3 + 2 \\cdot x",
+    "gloss_en": "the sum of 3 and the product of 2 and x",
+    "gloss_sa": "३, (२, क्षः च — एषां घातः) च — एषां सङ्कलनम्",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-plain-10",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "(x+1)^2",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः सङ्कलनस्य २ १ क्षः २",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\left(1 + x\\right)^{2}",
+    "gloss_en": "the square of the sum of 1 and x",
+    "gloss_sa": "(१, क्षः च — एषां सङ्कलनम्) इत्यस्य (२) इत्यनेन घातांकेन घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-plain-11",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "exp(x)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "ळककः क्षे",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\exp\\left(x\\right)",
+    "gloss_en": "the exponential of x",
+    "gloss_sa": "क्षे ळककमानम्",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     },
+     {
+      "identifier": "EXP",
+      "stem": "ळकक",
+      "reading": "function"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-plain-12",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "x^(1/2)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः क्षस्य १⁄२",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\sqrt{x}",
+    "gloss_en": "the square root of x",
+    "gloss_sa": "क्षस्य वर्गमूलम्",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-plain-13",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "1/x",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः क्षस्य ऋणम् १",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\frac{1}{x}",
+    "gloss_en": "the reciprocal of x",
+    "gloss_sa": "क्षस्य व्युत्क्रमः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-latex-00",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "\\frac{x^2}{1+x}",
+    "kind": "latex"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ घातांकः क्षस्य २ घातांकः सङ्कलनस्य २ १ क्षः ऋणम् १",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\frac{x^{2}}{1 + x}",
+    "gloss_en": "the square of x divided by the sum of 1 and x",
+    "gloss_sa": "(क्षस्य (२) इत्यनेन घातांकेन घातः), ((१, क्षः च — एषां सङ्कलनम्) इत्यस्य व्युत्क्रमः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-latex-01",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "\\sqrt{x}+1",
+    "kind": "latex"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "सङ्कलनम् २ १ घातांकः क्षस्य १⁄२",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "1 + \\sqrt{x}",
+    "gloss_en": "the sum of 1 and the square root of x",
+    "gloss_sa": "१, (क्षस्य वर्गमूलम्) च — एषां सङ्कलनम्",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-latex-02",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "\\sin(x)^2",
+    "kind": "latex"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः ळगकस्य क्षे २",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\sin\\left(x\\right)^{2}",
+    "gloss_en": "the square of the sine of x",
+    "gloss_sa": "(क्षे ळगकमानम्) इत्यस्य (२) इत्यनेन घातांकेन घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     },
+     {
+      "identifier": "SIN",
+      "stem": "ळगक",
+      "reading": "function"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-latex-03",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "e^{-x}",
+    "kind": "latex"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः ळचखस्य घातेन २ ऋणम् १ क्षः",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "e^{-x}",
+    "gloss_en": "the power, with exponent minus x, of e",
+    "gloss_sa": "ळचखस्य (क्षस्य ऋणम्) इत्यनेन घातांकेन घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-latex-04",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "\\zeta(s)",
+    "kind": "latex"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "ळफकः से",
+    "declarations": "प्रकरणम् सः ळञख ।",
+    "latex": "\\zeta\\left(s\\right)",
+    "gloss_en": "the Riemann zeta function of s",
+    "gloss_sa": "से ळफकमानम्",
+    "resolved": [
+     {
+      "identifier": "s",
+      "stem": "स",
+      "reading": "variable"
+     },
+     {
+      "identifier": "ZETA",
+      "stem": "ळफक",
+      "reading": "function"
+     }
+    ],
+    "env": {
+     "स": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "s"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-latex-05",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "\\Gamma(x)",
+    "kind": "latex"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "ळपकः क्षे",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\Gamma\\left(x\\right)",
+    "gloss_en": "the gamma function of x",
+    "gloss_sa": "क्षे ळपकमानम्",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     },
+     {
+      "identifier": "GAMMA",
+      "stem": "ळपक",
+      "reading": "function"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "in-latex-06",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "\\lambda(s)",
+    "kind": "latex"
+   },
+   "want": {
+    "ok": false,
+    "code": 943,
+    "name": "AmbiguousBranch",
+    "why": "0x3af AmbiguousBranch: λ(·) is Dirichlet λ(s) or Carmichael λ(n): write \\lambda_{D} or \\lambda_{C}"
+   },
+   "note": "refusal expected"
+  },
+  {
+   "id": "in-latex-07",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "\\frac{1}{0}",
+    "kind": "latex"
+   },
+   "want": {
+    "ok": false,
+    "code": 939,
+    "name": "ZeroToNegativePower",
+    "why": "ZeroToNegativePower: 0 raised to a negative power"
+   },
+   "note": "refusal expected"
+  },
+  {
+   "id": "rt-sutra-00",
+   "feature": "editor",
+   "req": {
+    "op": "from_sutra",
+    "text": "घातः २ घातांकः क्षस्य २ घातांकः सङ्कलनस्य २ १ घातांकः ळचखस्य क्षेण ऋणम् १"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ घातांकः क्षस्य २ घातांकः सङ्कलनस्य २ १ घातांकः ळचखस्य क्षेण ऋणम् १",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\frac{x^{2}}{1 + e^{x}}",
+    "gloss_en": "the square of x divided by the sum of 1 and the power, with exponent x, of e",
+    "gloss_sa": "(क्षस्य (२) इत्यनेन घातांकेन घातः), ((१, (ळचखस्य क्षेण घातांकेन घातः) च — एषां सङ्कलनम्) इत्यस्य व्युत्क्रमः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": "round trip of in-plain-00"
+  },
+  {
+   "id": "rt-sutra-01",
+   "feature": "editor",
+   "req": {
+    "op": "from_sutra",
+    "text": "सङ्कलनम् २ घातांकः क्षस्य २ घातांकः यस्य २"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "सङ्कलनम् २ घातांकः क्षस्य २ घातांकः यस्य २",
+    "declarations": "प्रकरणम् क्षः ळञख यः ळञख ।",
+    "latex": "x^{2} + y^{2}",
+    "gloss_en": "the sum of the square of x and the square of y",
+    "gloss_sa": "(क्षस्य (२) इत्यनेन घातांकेन घातः), (यस्य (२) इत्यनेन घातांकेन घातः) च — एषां सङ्कलनम्",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     },
+     {
+      "identifier": "y",
+      "stem": "य",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ],
+     "य": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x",
+     "y"
+    ]
+   },
+   "note": "round trip of in-plain-01"
+  },
+  {
+   "id": "rt-sutra-02",
+   "feature": "editor",
+   "req": {
+    "op": "from_sutra",
+    "text": "घातः २ ळगकः क्षे ळघकः क्षे"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ ळगकः क्षे ळघकः क्षे",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\sin\\left(x\\right) \\cdot \\cos\\left(x\\right)",
+    "gloss_en": "the product of the sine of x and the cosine of x",
+    "gloss_sa": "(क्षे ळगकमानम्), (क्षे ळघकमानम्) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     },
+     {
+      "identifier": "SIN",
+      "stem": "ळगक",
+      "reading": "function"
+     },
+     {
+      "identifier": "COS",
+      "stem": "ळघक",
+      "reading": "function"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": "round trip of in-plain-02"
+  },
+  {
+   "id": "rt-sutra-03",
+   "feature": "editor",
+   "req": {
+    "op": "from_sutra",
+    "text": "घातांकः ळचखस्य घातेन २ ऋणम् १ घातांकः क्षस्य २"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः ळचखस्य घातेन २ ऋणम् १ घातांकः क्षस्य २",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "e^{-x^{2}}",
+    "gloss_en": "the power, with exponent minus the square of x, of e",
+    "gloss_sa": "ळचखस्य ((क्षस्य (२) इत्यनेन घातांकेन घातः) इत्यस्य ऋणम्) इत्यनेन घातांकेन घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": "round trip of in-plain-03"
+  },
+  {
+   "id": "rt-sutra-04",
+   "feature": "editor",
+   "req": {
+    "op": "from_sutra",
+    "text": "घातांकः सङ्कलनस्य २ १ घातांकः क्षस्य २ ऋणम् १"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः सङ्कलनस्य २ १ घातांकः क्षस्य २ ऋणम् १",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\frac{1}{1 + x^{2}}",
+    "gloss_en": "the reciprocal of the sum of 1 and the square of x",
+    "gloss_sa": "(१, (क्षस्य (२) इत्यनेन घातांकेन घातः) च — एषां सङ्कलनम्) इत्यस्य व्युत्क्रमः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": "round trip of in-plain-04"
+  },
+  {
+   "id": "rt-sutra-05",
+   "feature": "editor",
+   "req": {
+    "op": "from_sutra",
+    "text": "सङ्कलनम् ३ १ घातांकः क्षस्य ३ घातः २ ऋणम् २ क्षः"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "सङ्कलनम् ३ १ घातांकः क्षस्य ३ घातः २ ऋणम् २ क्षः",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "1 + x^{3} -2 \\cdot x",
+    "gloss_en": "the sum of 1, the cube of x and the product of minus 2 and x",
+    "gloss_sa": "१, (क्षस्य (३) इत्यनेन घातांकेन घातः), (ऋणम् २, क्षः च — एषां घातः) च — एषां सङ्कलनम्",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": "round trip of in-plain-05"
+  },
+  {
+   "id": "rt-sutra-06",
+   "feature": "editor",
+   "req": {
+    "op": "from_sutra",
+    "text": "घातांकः क्षस्य १⁄२"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः क्षस्य १⁄२",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\sqrt{x}",
+    "gloss_en": "the square root of x",
+    "gloss_sa": "क्षस्य वर्गमूलम्",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": "round trip of in-plain-06"
+  },
+  {
+   "id": "rt-sutra-07",
+   "feature": "editor",
+   "req": {
+    "op": "from_sutra",
+    "text": "घातः २ ळखकः क्षे घातांकः क्षस्य ऋणम् १"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ ळखकः क्षे घातांकः क्षस्य ऋणम् १",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\frac{\\log\\left(x\\right)}{x}",
+    "gloss_en": "the natural logarithm of x divided by x",
+    "gloss_sa": "(क्षे ळखकमानम्), (क्षस्य व्युत्क्रमः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     },
+     {
+      "identifier": "LOG",
+      "stem": "ळखक",
+      "reading": "function"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": "round trip of in-plain-07"
+  },
+  {
+   "id": "val-00",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "घातः २ घातांकः क्षस्य २ घातांकः सङ्कलनस्य २ १ घातांकः ळचखस्य क्षेण ऋणम् १",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "1"
+    },
+    "digits": 30,
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "re": "0.268941421369995120748840758178",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "input='x^2/(1+e^x)' vals={'x': '1'}"
+  },
+  {
+   "id": "val-01",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "सङ्कलनम् २ घातांकः क्षस्य २ घातांकः यस्य २",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ],
+     "य": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "3",
+     "य": "4"
+    },
+    "digits": 30,
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "re": "25.0",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "input='x^2+y^2' vals={'x': '3', 'y': '4'}"
+  },
+  {
+   "id": "val-02",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "घातः २ ळगकः क्षे ळघकः क्षे",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "1/2"
+    },
+    "digits": 30,
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "re": "0.420735492403948253326251160815",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "input='sin(x)*cos(x)' vals={'x': '1/2'}"
+  },
+  {
+   "id": "val-03",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "घातांकः ळचखस्य घातेन २ ऋणम् १ घातांकः क्षस्य २",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "0"
+    },
+    "digits": 30,
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "re": "1.0",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "input='e^(-x^2)' vals={'x': '0'}"
+  },
+  {
+   "id": "val-04",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "घातांकः सङ्कलनस्य २ १ घातांकः क्षस्य २ ऋणम् १",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "3/2"
+    },
+    "digits": 50,
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "re": "0.30769230769230769230769230769230769230769230769231",
+    "im": "0.0",
+    "digits": 50
+   },
+   "note": "input='1/(1+x^2)' vals={'x': '3/2'}"
+  },
+  {
+   "id": "val-05",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "ळपकः क्षे",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "1/2"
+    },
+    "digits": 30,
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "re": "1.77245385090551602729816748334",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "input='\\\\Gamma(x)' vals={'x': '1/2'}"
+  },
+  {
+   "id": "val-06",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "ळपकः क्षे",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "5"
+    },
+    "digits": 30,
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "re": "24.0",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "input='\\\\Gamma(x)' vals={'x': '5'}"
+  },
+  {
+   "id": "val-07",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "घातांकः क्षस्य १⁄२",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "2"
+    },
+    "digits": 40,
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "re": "1.41421356237309504880168872420969807857",
+    "im": "0.0",
+    "digits": 40
+   },
+   "note": "input='sqrt(x)' vals={'x': '2'}"
+  },
+  {
+   "id": "val-08",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "घातांकः क्षस्य १⁄२",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "-4"
+    },
+    "digits": 20,
+    "complex": true
+   },
+   "want": {
+    "ok": true,
+    "re": "0.0",
+    "im": "2.0",
+    "digits": 20
+   },
+   "note": "input='x^(1/2)' vals={'x': '-4'}"
+  },
+  {
+   "id": "val-09",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "घातः २ ळखकः क्षे घातांकः क्षस्य ऋणम् १",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "7"
+    },
+    "digits": 25,
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "re": "0.277987164150759043586479",
+    "im": "0.0",
+    "digits": 25
+   },
+   "note": "input='log(x)/x' vals={'x': '7'}"
+  },
+  {
+   "id": "val-10",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "घातांकः क्षस्य ऋणम् १",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "0"
+    },
+    "digits": 30,
+    "complex": false
+   },
+   "want": {
+    "ok": false,
+    "code": 939,
+    "name": "NumericalCheckFailed",
+    "why": "0x3ab NumericalCheckFailed: 0 to a negative power (a pole)"
+   },
+   "note": "input='1/x' vals={'x': '0'}"
+  },
+  {
+   "id": "val-11",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "ळपकः क्षे",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "0"
+    },
+    "digits": 30,
+    "complex": false
+   },
+   "want": {
+    "ok": false,
+    "code": 935,
+    "name": "Unsupported",
+    "why": "ValueError: gamma function pole"
+   },
+   "note": "input='\\\\Gamma(x)' vals={'x': '0'}"
+  },
+  {
+   "id": "val-12",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "ळपकः क्षे",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "-3"
+    },
+    "digits": 30,
+    "complex": false
+   },
+   "want": {
+    "ok": false,
+    "code": 935,
+    "name": "Unsupported",
+    "why": "ValueError: gamma function pole"
+   },
+   "note": "input='\\\\Gamma(x)' vals={'x': '-3'}"
+  },
+  {
+   "id": "smp-00",
+   "feature": "explorer",
+   "req": {
+    "op": "sample",
+    "text": "ळगकः क्षे",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क्ष",
+      "lo": "0",
+      "hi": "6",
+      "n": 25
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     25
+    ],
+    "re": {
+     "sha256": "f2f3dbd584b323d9fdc702c4f0ba6b270b0cb6576a4a5802b516c5e67441babb",
+     "len": 200
+    },
+    "im": null,
+    "mask": {
+     "sha256": "61126de1b795b976f3ac878f48e88fa77a87d7308ba57c7642b9e1068403a496",
+     "len": 25
+    }
+   },
+   "note": "input='sin(x)'"
+  },
+  {
+   "id": "smp-01",
+   "feature": "explorer",
+   "req": {
+    "op": "sample",
+    "text": "ळपकः क्षे",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क्ष",
+      "lo": "-9/2",
+      "hi": "5",
+      "n": 39
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     39
+    ],
+    "re": {
+     "sha256": "316d140a0bcf97ae5f7fcc9842874c3bc6f095f0f4045f7caf19f0bfda26857c",
+     "len": 312
+    },
+    "im": null,
+    "mask": {
+     "sha256": "44e35b1e21ca22f2bfa31b9901298b32add13e7820594daad456da5b9c0f4c19",
+     "len": 39
+    }
+   },
+   "note": "input='\\\\Gamma(x)'"
+  },
+  {
+   "id": "smp-02",
+   "feature": "explorer",
+   "req": {
+    "op": "sample",
+    "text": "घातः २ घातांकः क्षस्य २ घातांकः सङ्कलनस्य २ १ घातांकः ळचखस्य क्षेण ऋणम् १",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क्ष",
+      "lo": "-5",
+      "hi": "5",
+      "n": 21
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "c7b0b5f09ddf7247dd912abe34c5e06bc8cc5c61adc3ef5364f1c3700f09e553",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "input='x^2/(1+e^x)'"
+  },
+  {
+   "id": "smp-03",
+   "feature": "explorer",
+   "req": {
+    "op": "sample",
+    "text": "घातांकः क्षस्य ऋणम् १",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क्ष",
+      "lo": "-1",
+      "hi": "1",
+      "n": 11
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     11
+    ],
+    "re": {
+     "sha256": "16b2ebfc69afb388eb4bd891d94d2af2b76fb8a060686471a55a2a34af166011",
+     "len": 88
+    },
+    "im": null,
+    "mask": {
+     "sha256": "63a907235d6263b0e8c90c26916b88bbb49d49a664518e158faefbdb69f13aca",
+     "len": 11
+    }
+   },
+   "note": "input='1/x'"
+  },
+  {
+   "id": "smp-04",
+   "feature": "explorer",
+   "req": {
+    "op": "sample",
+    "text": "ळखकः क्षे",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क्ष",
+      "lo": "-1",
+      "hi": "2",
+      "n": 13
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     13
+    ],
+    "re": {
+     "sha256": "17a6148fd79238f50db9193ea57341c6b35e2d8ce913f1c29384039d42f86f0a",
+     "len": 104
+    },
+    "im": null,
+    "mask": {
+     "sha256": "422a81263033f8e6d59acb1eeeba005f291f7c91440f1053d4b590f2c036d6ff",
+     "len": 13
+    }
+   },
+   "note": "input='log(x)'"
+  },
+  {
+   "id": "smp-05",
+   "feature": "explorer",
+   "req": {
+    "op": "sample",
+    "text": "सङ्कलनम् २ घातांकः क्षस्य २ घातांकः यस्य २",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ],
+     "य": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क्ष",
+      "lo": "-2",
+      "hi": "2",
+      "n": 9
+     },
+     {
+      "name": "य",
+      "lo": "-2",
+      "hi": "2",
+      "n": 9
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     9,
+     9
+    ],
+    "re": {
+     "sha256": "e787f84a846a8f474436f865160f9cbb84d81610ebdd2f45042a9e8cf97c6341",
+     "len": 648
+    },
+    "im": null,
+    "mask": {
+     "sha256": "6778c7c7b6b6c1c273e668169a7652a681da86ad62d03f7c5aa120405069feb2",
+     "len": 81
+    }
+   },
+   "note": "input='x^2+y^2'"
+  },
+  {
+   "id": "smp-06",
+   "feature": "explorer",
+   "req": {
+    "op": "sample",
+    "text": "घातः २ ळघकः ये घातांकः ळचखस्य घातेन २ ऋणम् १ घातांकः क्षस्य २",
+    "env": {
+     "य": [
+      "var",
+      0,
+      "m"
+     ],
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क्ष",
+      "lo": "-2",
+      "hi": "2",
+      "n": 9
+     },
+     {
+      "name": "य",
+      "lo": "-3",
+      "hi": "3",
+      "n": 7
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     9,
+     7
+    ],
+    "re": {
+     "sha256": "a72856781a7c538a60610a1d6952c6609f8e97cf16a62df71e3f73c296b441c6",
+     "len": 504
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c7723fa1e0127975e49e62e753db53924c1bd84b8ac1ac08df78d09270f3d971",
+     "len": 63
+    }
+   },
+   "note": "input='e^(-x^2)*cos(y)'"
+  },
+  {
+   "id": "smp-07",
+   "feature": "explorer",
+   "req": {
+    "op": "sample",
+    "text": "घातः २ यः ळगकः क्षे",
+    "env": {
+     "य": [
+      "var",
+      0,
+      "m"
+     ],
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क्ष",
+      "lo": "0",
+      "hi": "3",
+      "n": 7
+     }
+    ],
+    "fixed": {
+     "य": "2"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     7
+    ],
+    "re": {
+     "sha256": "11ebf6b4a68b60aac7fbf257f86946acabccd034583eb1d9746302b100ef0019",
+     "len": 56
+    },
+    "im": null,
+    "mask": {
+     "sha256": "837885c8f8091aeaeb9ec3c3f85a6ff470a415e610b8ba3e49f9b33c9cf9d619",
+     "len": 7
+    }
+   },
+   "note": "input='sin(x)*y'"
+  },
+  {
+   "id": "smp-08",
+   "feature": "explorer",
+   "req": {
+    "op": "sample",
+    "text": "ळफकः से",
+    "env": {
+     "स": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "स",
+      "lo": "-2",
+      "hi": "3",
+      "n": 6,
+      "complex_part": "re"
+     },
+     {
+      "name": "स",
+      "lo": "-2",
+      "hi": "2",
+      "n": 5,
+      "complex_part": "im"
+     }
+    ],
+    "fixed": {},
+    "complex": true
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     6,
+     5
+    ],
+    "re": {
+     "sha256": "8f10f1b5193c66a8429345e436d0da49f53dff2495db277bac7f1adee80b40cc",
+     "len": 240
+    },
+    "im": {
+     "sha256": "c227d6a7ad2f46155d78d583c5a4779d1d878f26f9470be02037b32dd5075eff",
+     "len": 240
+    },
+    "mask": {
+     "sha256": "f87c3de4323af0c300806336a877ea863330d040eb97479d0284427fc37ab246",
+     "len": 30
+    }
+   },
+   "note": "input='zeta(s)'"
+  },
+  {
+   "id": "smp-09",
+   "feature": "explorer",
+   "req": {
+    "op": "sample",
+    "text": "ळपकः से",
+    "env": {
+     "स": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "स",
+      "lo": "-3",
+      "hi": "3",
+      "n": 7,
+      "complex_part": "re"
+     },
+     {
+      "name": "स",
+      "lo": "-2",
+      "hi": "2",
+      "n": 5,
+      "complex_part": "im"
+     }
+    ],
+    "fixed": {},
+    "complex": true
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     7,
+     5
+    ],
+    "re": {
+     "sha256": "144ba4c2c82c5625b6b3c88f94ce162f1ee0b75800d5449a7992b5e80f72bbde",
+     "len": 280
+    },
+    "im": {
+     "sha256": "042ad2e66ddc50590bc73e291bb64c93b8a95710cb462f0ae80edea618bae393",
+     "len": 280
+    },
+    "mask": {
+     "sha256": "7919c4a8a9b6f15ddd24703e7803c72128c9dcc0df795e7f6d474fe015da126b",
+     "len": 35
+    }
+   },
+   "note": "input='\\\\Gamma(s)'"
+  },
+  {
+   "id": "verse-dev-0",
+   "feature": "mantra",
+   "req": {
+    "op": "verse",
+    "text": "धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः । मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय ॥",
+    "cite": ""
+   },
+   "want": {
+    "ok": true,
+    "padas": [
+     {
+      "n": 1,
+      "text": "धर्मक्षेत्रेकुरुक्षेत्रे",
+      "syllables": [
+       {
+        "aksara": "धर्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "मक्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "षेत्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "रे",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "कु",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "रुक्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "षेत्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "रे",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": true
+       }
+      ],
+      "pattern": "GGGGLGGG",
+      "ganas": [
+       "म",
+       "र",
+       "ग",
+       "ग"
+      ],
+      "matra": 15,
+      "uddishta": 17,
+      "length": 8
+     },
+     {
+      "n": 2,
+      "text": "समवेतायुयुत्सवः",
+      "syllables": [
+       {
+        "aksara": "स",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "म",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "वे",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "ता",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "यु",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "युत्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "स",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "वः",
+        "weight": "G",
+        "why": "anusvāra/visarga follows",
+        "anceps": true
+       }
+      ],
+      "pattern": "LLGGLGLG",
+      "ganas": [
+       "स",
+       "र",
+       "ल",
+       "ग"
+      ],
+      "matra": 12,
+      "uddishta": 84,
+      "length": 8
+     },
+     {
+      "n": 3,
+      "text": "मामकाःपाण्डवाश्चैव",
+      "syllables": [
+       {
+        "aksara": "मा",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "म",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "काः",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "पाण्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "ड",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "वाश्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "चै",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "व",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": true
+       }
+      ],
+      "pattern": "GLGGLGGL",
+      "ganas": [
+       "र",
+       "र",
+       "ग",
+       "ल"
+      ],
+      "matra": 13,
+      "uddishta": 147,
+      "length": 8
+     },
+     {
+      "n": 4,
+      "text": "किमकुर्वतसञ्जय",
+      "syllables": [
+       {
+        "aksara": "कि",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "म",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "कुर्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "व",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "त",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "सञ्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "ज",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "य",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": true
+       }
+      ],
+      "pattern": "LLGLLGLL",
+      "ganas": [
+       "स",
+       "स",
+       "ल",
+       "ल"
+      ],
+      "matra": 10,
+      "uddishta": 220,
+      "length": 8
+     }
+    ],
+    "metre": {
+     "metre": "अनुष्टुभ् (श्लोक)",
+     "kind": "anuṣṭubh",
+     "per_pada": [
+      "पथ्या",
+      "पथ्या (सम)",
+      "पथ्या",
+      "पथ्या (सम)"
+     ],
+     "note": "syllables 5–7 checked per pāda; the vipulās' caesura conditions are not checked",
+     "deviations": [],
+     "strict": "अनुष्टुभ् (श्लोक)",
+     "tolerant": "अनुष्टुभ् (श्लोक)"
+    },
+    "explanation": [
+     "pāda 1: 8 syllables, GGGGLGGG (म र ग ग), 15 mātrās, prastāra index 17 of 256",
+     "pāda 2: 8 syllables, LLGGLGLG (स र ल ग), 12 mātrās, prastāra index 84 of 256",
+     "pāda 3: 8 syllables, GLGGLGGL (र र ग ल), 13 mātrās, prastāra index 147 of 256",
+     "pāda 4: 8 syllables, LLGLLGLL (स स ल ल), 10 mātrās, prastāra index 220 of 256",
+     "Weights by Piṅgala (Chandaḥśāstra, DESIGN A1: 1.4.10–12): dīrgha, anusvāra/visarga, or a following saṃyoga makes a syllable guru; the pāda-final syllable is anceps.",
+     "Metre: अनुष्टुभ् (श्लोक). syllables 5–7 checked per pāda; the vipulās' caesura conditions are not checked."
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "text-dev-0",
+   "feature": "mantra",
+   "req": {
+    "op": "text",
+    "text": "धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः । मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय ॥",
+    "script": "dev"
+   },
+   "want": {
+    "ok": true,
+    "members": [
+     "dharmakṣetre",
+     "kurukṣetre",
+     "samavetāḥ",
+     "yuyutsavaḥ",
+     "māmakāḥ",
+     "pāṇḍavāḥ",
+     "ca",
+     "eva",
+     "kim",
+     "akurvata",
+     "san",
+     "jaya"
+    ],
+    "words": [
+     {
+      "form": "dharmakṣetre",
+      "readings": [
+       {
+        "lemma": "dharmakṣetra",
+        "upos": "NOUN",
+        "case": "Loc",
+        "vibhakti": "सप्तमी",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "kurukṣetre",
+      "readings": [
+       {
+        "lemma": "kurukṣetra",
+        "upos": "NOUN",
+        "case": "Loc",
+        "vibhakti": "सप्तमी",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 63
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "samavetāḥ",
+      "readings": [
+       {
+        "lemma": "samave",
+        "upos": "VERB",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Plur",
+        "gender": "Masc",
+        "count": 16
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "yuyutsavaḥ",
+      "readings": [
+       {
+        "lemma": "yuyutsu",
+        "upos": "ADJ",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Plur",
+        "gender": "Masc",
+        "count": 28
+       },
+       {
+        "lemma": "yuyutsu",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Plur",
+        "gender": "Masc",
+        "count": 3
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "māmakāḥ",
+      "readings": [
+       {
+        "lemma": "māmaka",
+        "upos": "ADJ",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Plur",
+        "gender": "Masc",
+        "count": 39
+       },
+       {
+        "lemma": "māmaka",
+        "upos": "ADJ",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Plur",
+        "gender": "Fem",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "pāṇḍavāḥ",
+      "readings": [
+       {
+        "lemma": "pāṇḍava",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Plur",
+        "gender": "Masc",
+        "count": 747
+       },
+       {
+        "lemma": "pāṇḍava",
+        "upos": "NOUN",
+        "case": "Voc",
+        "vibhakti": "सम्बोधनम्",
+        "number": "Plur",
+        "gender": "Masc",
+        "count": 15
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "ca",
+      "readings": [
+       {
+        "lemma": "ca",
+        "upos": "CONJ",
+        "case": "",
+        "vibhakti": "",
+        "number": "",
+        "gender": "",
+        "count": 145719
+       },
+       {
+        "lemma": "ca",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 15
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "eva",
+      "readings": [
+       {
+        "lemma": "eva",
+        "upos": "PART",
+        "case": "",
+        "vibhakti": "",
+        "number": "",
+        "gender": "",
+        "count": 39421
+       },
+       {
+        "lemma": "eva",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "kim",
+      "readings": [
+       {
+        "lemma": "ka",
+        "upos": "PRON",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 3122
+       },
+       {
+        "lemma": "ka",
+        "upos": "PRON",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 1844
+       },
+       {
+        "lemma": "kim",
+        "upos": "ADV",
+        "case": "",
+        "vibhakti": "",
+        "number": "",
+        "gender": "",
+        "count": 980
+       },
+       {
+        "lemma": "kim",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 5
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "akurvata",
+      "readings": [
+       {
+        "lemma": "kṛ",
+        "upos": "VERB",
+        "case": "",
+        "vibhakti": "",
+        "number": "Plur",
+        "gender": "",
+        "count": 30
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "san",
+      "readings": [
+       {
+        "lemma": "as",
+        "upos": "VERB",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 428
+       },
+       {
+        "lemma": "san",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 8
+       },
+       {
+        "lemma": "san",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 4
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "jaya",
+      "readings": [
+       {
+        "lemma": "jaya",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 353
+       },
+       {
+        "lemma": "ji",
+        "upos": "VERB",
+        "case": "",
+        "vibhakti": "",
+        "number": "Sing",
+        "gender": "",
+        "count": 201
+       },
+       {
+        "lemma": "jaya",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "Masc",
+        "count": 1
+       }
+      ],
+      "compound_member": true
+     }
+    ],
+    "links": [
+     {
+      "from": 0,
+      "to": 1,
+      "kind": "agreement",
+      "features": [
+       [
+        "Loc",
+        "Sing",
+        "Neut"
+       ]
+      ]
+     },
+     {
+      "from": 2,
+      "to": 3,
+      "kind": "agreement",
+      "features": [
+       [
+        "Nom",
+        "Plur",
+        "Masc"
+       ]
+      ]
+     },
+     {
+      "from": 3,
+      "to": 4,
+      "kind": "agreement",
+      "features": [
+       [
+        "Nom",
+        "Plur",
+        "Masc"
+       ]
+      ]
+     },
+     {
+      "from": 4,
+      "to": 5,
+      "kind": "agreement",
+      "features": [
+       [
+        "Nom",
+        "Plur",
+        "Masc"
+       ]
+      ]
+     }
+    ],
+    "mode": "soft",
+    "note": "agreement and samāsa links only; these are not dependency arcs (no syntactic parser in v1)"
+   },
+   "note": ""
+  },
+  {
+   "id": "struct-dev-0",
+   "feature": "mantra",
+   "req": {
+    "op": "structure",
+    "text": "धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः । मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय ॥"
+   },
+   "want": {
+    "ok": true,
+    "figures": [],
+    "note": "verified = every scored held-out item found, 0 false positives; the number of held-out examples is shown, and n = 1 is not robust"
+   },
+   "note": ""
+  },
+  {
+   "id": "verse-dev-1",
+   "feature": "mantra",
+   "req": {
+    "op": "verse",
+    "text": "तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि",
+    "cite": ""
+   },
+   "want": {
+    "ok": true,
+    "padas": [
+     {
+      "n": 1,
+      "text": "तत्सवितुर्वरेण्यंभर्गोदेवस्यधीमहि",
+      "syllables": [
+       {
+        "aksara": "तत्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "स",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "वि",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "तुर्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "व",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "रेण्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "यं",
+        "weight": "G",
+        "why": "anusvāra/visarga follows",
+        "anceps": false
+       },
+       {
+        "aksara": "भर्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "गो",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "दे",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "वस्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "य",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "धी",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "म",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "हि",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": true
+       }
+      ],
+      "pattern": "GLLGLGGGGGGLGLL",
+      "ganas": [
+       "भ",
+       "र",
+       "म",
+       "त",
+       "भ"
+      ],
+      "matra": 24,
+      "uddishta": 26647,
+      "length": 15
+     }
+    ],
+    "metre": {
+     "metre": null,
+     "kind": null,
+     "per_pada": [
+      null
+     ],
+     "note": "no listed metre fits; the pattern and the prastāra index are still exact",
+     "deviations": [],
+     "strict": null,
+     "tolerant": null
+    },
+    "explanation": [
+     "pāda 1: 15 syllables, GLLGLGGGGGGLGLL (भ र म त भ), 24 mātrās, prastāra index 26647 of 32768",
+     "Weights by Piṅgala (Chandaḥśāstra, DESIGN A1: 1.4.10–12): dīrgha, anusvāra/visarga, or a following saṃyoga makes a syllable guru; the pāda-final syllable is anceps.",
+     "Metre: not identified. no listed metre fits; the pattern and the prastāra index are still exact."
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "text-dev-1",
+   "feature": "mantra",
+   "req": {
+    "op": "text",
+    "text": "तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि",
+    "script": "dev"
+   },
+   "want": {
+    "ok": true,
+    "members": [
+     "tat",
+     "savituḥ",
+     "vareṇyam",
+     "bhargaḥ",
+     "devasya",
+     "dhīmahi"
+    ],
+    "words": [
+     {
+      "form": "tat",
+      "readings": [
+       {
+        "lemma": "tad",
+        "upos": "PRON",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 10607
+       },
+       {
+        "lemma": "tad",
+        "upos": "PRON",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 10343
+       },
+       {
+        "lemma": "tad",
+        "upos": "PRON",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 7
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "savituḥ",
+      "readings": [
+       {
+        "lemma": "savitṛ",
+        "upos": "NOUN",
+        "case": "Gen",
+        "vibhakti": "षष्ठी",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 50
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "vareṇyam",
+      "readings": [
+       {
+        "lemma": "vareṇya",
+        "upos": "ADJ",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 22
+       },
+       {
+        "lemma": "vareṇya",
+        "upos": "ADJ",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 3
+       },
+       {
+        "lemma": "vareṇya",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "bhargaḥ",
+      "readings": [
+       {
+        "lemma": "bharga",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 11
+       },
+       {
+        "lemma": "bhargas",
+        "upos": "NOUN",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 4
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "devasya",
+      "readings": [
+       {
+        "lemma": "deva",
+        "upos": "NOUN",
+        "case": "Gen",
+        "vibhakti": "षष्ठी",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 351
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "dhīmahi",
+      "readings": [
+       {
+        "lemma": "dhā",
+        "upos": "VERB",
+        "case": "",
+        "vibhakti": "",
+        "number": "Plur",
+        "gender": "",
+        "count": 47
+       }
+      ],
+      "compound_member": false
+     }
+    ],
+    "links": [
+     {
+      "from": 2,
+      "to": 3,
+      "kind": "agreement",
+      "features": [
+       [
+        "Acc",
+        "Sing",
+        "Neut"
+       ]
+      ]
+     }
+    ],
+    "mode": "soft",
+    "note": "agreement and samāsa links only; these are not dependency arcs (no syntactic parser in v1)"
+   },
+   "note": ""
+  },
+  {
+   "id": "struct-dev-1",
+   "feature": "mantra",
+   "req": {
+    "op": "structure",
+    "text": "तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि"
+   },
+   "want": {
+    "ok": true,
+    "figures": [],
+    "note": "verified = every scored held-out item found, 0 false positives; the number of held-out examples is shown, and n = 1 is not robust"
+   },
+   "note": ""
+  },
+  {
+   "id": "verse-dev-2",
+   "feature": "mantra",
+   "req": {
+    "op": "verse",
+    "text": "अथातो ब्रह्मजिज्ञासा",
+    "cite": ""
+   },
+   "want": {
+    "ok": true,
+    "padas": [
+     {
+      "n": 1,
+      "text": "अथातोब्रह्मजिज्ञासा",
+      "syllables": [
+       {
+        "aksara": "अ",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "था",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "तो",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "ब्रह्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "म",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "जिज्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "ञा",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "सा",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": true
+       }
+      ],
+      "pattern": "LGGGLGGG",
+      "ganas": [
+       "य",
+       "र",
+       "ग",
+       "ग"
+      ],
+      "matra": 14,
+      "uddishta": 18,
+      "length": 8
+     }
+    ],
+    "metre": {
+     "metre": null,
+     "kind": null,
+     "per_pada": [
+      null
+     ],
+     "note": "no listed metre fits; the pattern and the prastāra index are still exact",
+     "deviations": [],
+     "strict": null,
+     "tolerant": null
+    },
+    "explanation": [
+     "pāda 1: 8 syllables, LGGGLGGG (य र ग ग), 14 mātrās, prastāra index 18 of 256",
+     "Weights by Piṅgala (Chandaḥśāstra, DESIGN A1: 1.4.10–12): dīrgha, anusvāra/visarga, or a following saṃyoga makes a syllable guru; the pāda-final syllable is anceps.",
+     "Metre: not identified. no listed metre fits; the pattern and the prastāra index are still exact."
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "text-dev-2",
+   "feature": "mantra",
+   "req": {
+    "op": "text",
+    "text": "अथातो ब्रह्मजिज्ञासा",
+    "script": "dev"
+   },
+   "want": {
+    "ok": true,
+    "members": [
+     "atha",
+     "atas",
+     "brahma",
+     "jijñāsā"
+    ],
+    "words": [
+     {
+      "form": "atha",
+      "readings": [
+       {
+        "lemma": "atha",
+        "upos": "ADV",
+        "case": "",
+        "vibhakti": "",
+        "number": "",
+        "gender": "",
+        "count": 11689
+       },
+       {
+        "lemma": "atha",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "atas",
+      "readings": [
+       {
+        "lemma": "atas",
+        "upos": "ADV",
+        "case": "",
+        "vibhakti": "",
+        "number": "",
+        "gender": "",
+        "count": 2884
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "brahma",
+      "readings": [
+       {
+        "lemma": "brahman",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 2612
+       },
+       {
+        "lemma": "brahman",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 412
+       },
+       {
+        "lemma": "brahman",
+        "upos": "NOUN",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 297
+       },
+       {
+        "lemma": "brahman",
+        "upos": "NOUN",
+        "case": "Voc",
+        "vibhakti": "सम्बोधनम्",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 4
+       },
+       {
+        "lemma": "brahman",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "Masc",
+        "count": 1
+       }
+      ],
+      "compound_member": true
+     },
+     {
+      "form": "jijñāsā",
+      "readings": [
+       {
+        "lemma": "jijñāsā",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Fem",
+        "count": 31
+       },
+       {
+        "lemma": "jijñāsā",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 18
+       }
+      ],
+      "compound_member": false
+     }
+    ],
+    "links": [
+     {
+      "from": 2,
+      "to": 3,
+      "kind": "samāsa"
+     }
+    ],
+    "mode": "soft",
+    "note": "agreement and samāsa links only; these are not dependency arcs (no syntactic parser in v1)"
+   },
+   "note": ""
+  },
+  {
+   "id": "struct-dev-2",
+   "feature": "mantra",
+   "req": {
+    "op": "structure",
+    "text": "अथातो ब्रह्मजिज्ञासा"
+   },
+   "want": {
+    "ok": true,
+    "figures": [],
+    "note": "verified = every scored held-out item found, 0 false positives; the number of held-out examples is shown, and n = 1 is not robust"
+   },
+   "note": ""
+  },
+  {
+   "id": "verse-dev-3",
+   "feature": "mantra",
+   "req": {
+    "op": "verse",
+    "text": "ॐ पूर्णमदः पूर्णमिदं पूर्णात्पूर्णमुदच्यते",
+    "cite": ""
+   },
+   "want": {
+    "ok": true,
+    "padas": [
+     {
+      "n": 1,
+      "text": "पूर्णमदःपूर्णमिदंपूर्णात्पूर्णमुदच्यते",
+      "syllables": [
+       {
+        "aksara": "पूर्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "ण",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "म",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "दः",
+        "weight": "G",
+        "why": "anusvāra/visarga follows",
+        "anceps": false
+       },
+       {
+        "aksara": "पूर्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "ण",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "मि",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "दं",
+        "weight": "G",
+        "why": "anusvāra/visarga follows",
+        "anceps": false
+       },
+       {
+        "aksara": "पूर्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "णात्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "पूर्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "ण",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "मु",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "दच्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "य",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "ते",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": true
+       }
+      ],
+      "pattern": "GLLGGLLGGGGLLGLG",
+      "ganas": [
+       "भ",
+       "त",
+       "य",
+       "त",
+       "ज",
+       "ग"
+      ],
+      "matra": 25,
+      "uddishta": 22631,
+      "length": 16
+     }
+    ],
+    "metre": {
+     "metre": null,
+     "kind": null,
+     "per_pada": [
+      null
+     ],
+     "note": "no listed metre fits; the pattern and the prastāra index are still exact",
+     "deviations": [],
+     "strict": null,
+     "tolerant": null
+    },
+    "explanation": [
+     "pāda 1: 16 syllables, GLLGGLLGGGGLLGLG (भ त य त ज ग), 25 mātrās, prastāra index 22631 of 65536",
+     "Weights by Piṅgala (Chandaḥśāstra, DESIGN A1: 1.4.10–12): dīrgha, anusvāra/visarga, or a following saṃyoga makes a syllable guru; the pāda-final syllable is anceps.",
+     "Metre: not identified. no listed metre fits; the pattern and the prastāra index are still exact."
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "text-dev-3",
+   "feature": "mantra",
+   "req": {
+    "op": "text",
+    "text": "ॐ पूर्णमदः पूर्णमिदं पूर्णात्पूर्णमुदच्यते",
+    "script": "dev"
+   },
+   "want": {
+    "ok": true,
+    "members": [
+     "pūrṇa",
+     "madaḥ",
+     "pūrṇam",
+     "idam",
+     "pūrṇāt",
+     "pūrṇa",
+     "mud",
+     "ac",
+     "yate"
+    ],
+    "words": [
+     {
+      "form": "pūrṇa",
+      "readings": [
+       {
+        "lemma": "pṛ",
+        "upos": "VERB",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 257
+       },
+       {
+        "lemma": "pūrṇa",
+        "upos": "ADJ",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 236
+       }
+      ],
+      "compound_member": true
+     },
+     {
+      "form": "madaḥ",
+      "readings": [
+       {
+        "lemma": "mada",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 109
+       },
+       {
+        "lemma": "mad",
+        "upos": "NOUN",
+        "case": "Abl",
+        "vibhakti": "पञ्चमी",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "pūrṇam",
+      "readings": [
+       {
+        "lemma": "pṛ",
+        "upos": "VERB",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 48
+       },
+       {
+        "lemma": "pṛ",
+        "upos": "VERB",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 47
+       },
+       {
+        "lemma": "pṛ",
+        "upos": "VERB",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 44
+       },
+       {
+        "lemma": "pūrṇa",
+        "upos": "ADJ",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 35
+       },
+       {
+        "lemma": "pūrṇa",
+        "upos": "ADJ",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 32
+       },
+       {
+        "lemma": "pūrṇa",
+        "upos": "ADJ",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 22
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "idam",
+      "readings": [
+       {
+        "lemma": "idam",
+        "upos": "PRON",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 3152
+       },
+       {
+        "lemma": "idam",
+        "upos": "PRON",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 2948
+       },
+       {
+        "lemma": "idam",
+        "upos": "PRON",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 5
+       },
+       {
+        "lemma": "idam",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 4
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "pūrṇāt",
+      "readings": [
+       {
+        "lemma": "pṛ",
+        "upos": "VERB",
+        "case": "Abl",
+        "vibhakti": "पञ्चमी",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 4
+       },
+       {
+        "lemma": "pūrṇa",
+        "upos": "ADJ",
+        "case": "Abl",
+        "vibhakti": "पञ्चमी",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 3
+       },
+       {
+        "lemma": "pūrṇa",
+        "upos": "ADJ",
+        "case": "Abl",
+        "vibhakti": "पञ्चमी",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 2
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "pūrṇa",
+      "readings": [
+       {
+        "lemma": "pṛ",
+        "upos": "VERB",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 257
+       },
+       {
+        "lemma": "pūrṇa",
+        "upos": "ADJ",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 236
+       }
+      ],
+      "compound_member": true
+     },
+     {
+      "form": "mud",
+      "readings": [
+       {
+        "lemma": "mud",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 6
+       }
+      ],
+      "compound_member": true
+     },
+     {
+      "form": "ac",
+      "readings": [
+       {
+        "lemma": "ac",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 6
+       },
+       {
+        "lemma": "ac",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 2
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "yate",
+      "readings": [
+       {
+        "lemma": "yam",
+        "upos": "VERB",
+        "case": "Loc",
+        "vibhakti": "सप्तमी",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 1
+       },
+       {
+        "lemma": "yati",
+        "upos": "NOUN",
+        "case": "Voc",
+        "vibhakti": "सम्बोधनम्",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     }
+    ],
+    "links": [
+     {
+      "from": 0,
+      "to": 1,
+      "kind": "samāsa"
+     },
+     {
+      "from": 2,
+      "to": 3,
+      "kind": "agreement",
+      "features": [
+       [
+        "Acc",
+        "Sing",
+        "Neut"
+       ],
+       [
+        "Nom",
+        "Sing",
+        "Neut"
+       ]
+      ]
+     },
+     {
+      "from": 5,
+      "to": 6,
+      "kind": "samāsa"
+     },
+     {
+      "from": 6,
+      "to": 7,
+      "kind": "samāsa"
+     }
+    ],
+    "mode": "soft",
+    "note": "agreement and samāsa links only; these are not dependency arcs (no syntactic parser in v1)"
+   },
+   "note": ""
+  },
+  {
+   "id": "struct-dev-3",
+   "feature": "mantra",
+   "req": {
+    "op": "structure",
+    "text": "ॐ पूर्णमदः पूर्णमिदं पूर्णात्पूर्णमुदच्यते"
+   },
+   "want": {
+    "ok": true,
+    "figures": [],
+    "note": "verified = every scored held-out item found, 0 false positives; the number of held-out examples is shown, and n = 1 is not robust"
+   },
+   "note": ""
+  },
+  {
+   "id": "verse-iast-0",
+   "feature": "mantra",
+   "req": {
+    "op": "verse",
+    "text": "nāsuro 'yaṃ na vā nāgo dharasaṃstho na rākṣasaḥ",
+    "script": "iast",
+    "cite": ""
+   },
+   "want": {
+    "ok": true,
+    "padas": [
+     {
+      "n": 1,
+      "text": "नासुरोयंनवानागोधरसंस्थोनराक्षसः",
+      "syllables": [
+       {
+        "aksara": "ना",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "सु",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "रो",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "यं",
+        "weight": "G",
+        "why": "anusvāra/visarga follows",
+        "anceps": false
+       },
+       {
+        "aksara": "न",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "वा",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "ना",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "गो",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "ध",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "र",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "संस्",
+        "weight": "G",
+        "why": "anusvāra/visarga follows",
+        "anceps": false
+       },
+       {
+        "aksara": "थो",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "न",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "राक्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "ष",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "सः",
+        "weight": "G",
+        "why": "anusvāra/visarga follows",
+        "anceps": true
+       }
+      ],
+      "pattern": "GLGGLGGGLLGGLGLG",
+      "ganas": [
+       "र",
+       "र",
+       "त",
+       "य",
+       "ज",
+       "ग"
+      ],
+      "matra": 26,
+      "uddishta": 21267,
+      "length": 16
+     }
+    ],
+    "metre": {
+     "metre": null,
+     "kind": null,
+     "per_pada": [
+      null
+     ],
+     "note": "no listed metre fits; the pattern and the prastāra index are still exact",
+     "deviations": [],
+     "strict": null,
+     "tolerant": null
+    },
+    "explanation": [
+     "pāda 1: 16 syllables, GLGGLGGGLLGGLGLG (र र त य ज ग), 26 mātrās, prastāra index 21267 of 65536",
+     "Weights by Piṅgala (Chandaḥśāstra, DESIGN A1: 1.4.10–12): dīrgha, anusvāra/visarga, or a following saṃyoga makes a syllable guru; the pāda-final syllable is anceps.",
+     "Metre: not identified. no listed metre fits; the pattern and the prastāra index are still exact."
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "text-iast-0",
+   "feature": "mantra",
+   "req": {
+    "op": "text",
+    "text": "nāsuro 'yaṃ na vā nāgo dharasaṃstho na rākṣasaḥ",
+    "script": "iast"
+   },
+   "want": {
+    "ok": true,
+    "members": [
+     "na",
+     "asuraḥ",
+     "ayam",
+     "na",
+     "vā",
+     "nāgaḥ",
+     "dhara",
+     "saṃsthaḥ",
+     "na",
+     "rākṣasaḥ"
+    ],
+    "words": [
+     {
+      "form": "na",
+      "readings": [
+       {
+        "lemma": "na",
+        "upos": "PART",
+        "case": "",
+        "vibhakti": "",
+        "number": "",
+        "gender": "",
+        "count": 46185
+       },
+       {
+        "lemma": "na",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 14
+       },
+       {
+        "lemma": "na",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "asuraḥ",
+      "readings": [
+       {
+        "lemma": "asura",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 165
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "ayam",
+      "readings": [
+       {
+        "lemma": "idam",
+        "upos": "PRON",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 5456
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "na",
+      "readings": [
+       {
+        "lemma": "na",
+        "upos": "PART",
+        "case": "",
+        "vibhakti": "",
+        "number": "",
+        "gender": "",
+        "count": 46185
+       },
+       {
+        "lemma": "na",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 14
+       },
+       {
+        "lemma": "na",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "vā",
+      "readings": [
+       {
+        "lemma": "vā",
+        "upos": "CONJ",
+        "case": "",
+        "vibhakti": "",
+        "number": "",
+        "gender": "",
+        "count": 15993
+       },
+       {
+        "lemma": "vā",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 3
+       },
+       {
+        "lemma": "vā",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Fem",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "nāgaḥ",
+      "readings": [
+       {
+        "lemma": "nāga",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 251
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "dhara",
+      "readings": [
+       {
+        "lemma": "dhara",
+        "upos": "ADJ",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 11
+       },
+       {
+        "lemma": "dhara",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 5
+       },
+       {
+        "lemma": "dhṛ",
+        "upos": "VERB",
+        "case": "",
+        "vibhakti": "",
+        "number": "Sing",
+        "gender": "",
+        "count": 1
+       }
+      ],
+      "compound_member": true
+     },
+     {
+      "form": "saṃsthaḥ",
+      "readings": [
+       {
+        "lemma": "saṃstha",
+        "upos": "ADJ",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 37
+       },
+       {
+        "lemma": "saṃsthā",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 4
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "na",
+      "readings": [
+       {
+        "lemma": "na",
+        "upos": "PART",
+        "case": "",
+        "vibhakti": "",
+        "number": "",
+        "gender": "",
+        "count": 46185
+       },
+       {
+        "lemma": "na",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 14
+       },
+       {
+        "lemma": "na",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "rākṣasaḥ",
+      "readings": [
+       {
+        "lemma": "rākṣasa",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 318
+       },
+       {
+        "lemma": "rākṣasa",
+        "upos": "ADJ",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 22
+       }
+      ],
+      "compound_member": false
+     }
+    ],
+    "links": [
+     {
+      "from": 0,
+      "to": 1,
+      "kind": "agreement",
+      "features": [
+       [
+        "Nom",
+        "Sing",
+        "Masc"
+       ]
+      ]
+     },
+     {
+      "from": 1,
+      "to": 2,
+      "kind": "agreement",
+      "features": [
+       [
+        "Nom",
+        "Sing",
+        "Masc"
+       ]
+      ]
+     },
+     {
+      "from": 2,
+      "to": 3,
+      "kind": "agreement",
+      "features": [
+       [
+        "Nom",
+        "Sing",
+        "Masc"
+       ]
+      ]
+     },
+     {
+      "from": 6,
+      "to": 7,
+      "kind": "samāsa"
+     },
+     {
+      "from": 7,
+      "to": 8,
+      "kind": "agreement",
+      "features": [
+       [
+        "Nom",
+        "Sing",
+        "Masc"
+       ]
+      ]
+     },
+     {
+      "from": 8,
+      "to": 9,
+      "kind": "agreement",
+      "features": [
+       [
+        "Nom",
+        "Sing",
+        "Masc"
+       ]
+      ]
+     }
+    ],
+    "mode": "soft",
+    "note": "agreement and samāsa links only; these are not dependency arcs (no syntactic parser in v1)"
+   },
+   "note": ""
+  },
+  {
+   "id": "struct-iast-0",
+   "feature": "mantra",
+   "req": {
+    "op": "structure",
+    "text": "nāsuro 'yaṃ na vā nāgo dharasaṃstho na rākṣasaḥ",
+    "script": "iast"
+   },
+   "want": {
+    "ok": true,
+    "figures": [],
+    "note": "verified = every scored held-out item found, 0 false positives; the number of held-out examples is shown, and n = 1 is not robust"
+   },
+   "note": ""
+  },
+  {
+   "id": "verse-iast-1",
+   "feature": "mantra",
+   "req": {
+    "op": "verse",
+    "text": "tacchūnye punarāsthitāsmi bhavane prāṇāsta ete dṛḍhāḥ sakhyastiṣṭhata jīvitavyasaninī dambhādahaṃ rodimi",
+    "script": "iast",
+    "cite": ""
+   },
+   "want": {
+    "ok": true,
+    "padas": [
+     {
+      "n": 1,
+      "text": "तच्छून्येपुनरास्थितास्मिभवनेप्राणास्तएतेदृढाःसख्यस्तिष्ठतजीवितव्यसनिनीदम्भादहंरोदिमि",
+      "syllables": [
+       {
+        "aksara": "तच्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "छून्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "ये",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "पु",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "न",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "रास्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "थि",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "तास्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "मि",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "भ",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "व",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "ने",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "प्रा",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "णास्",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "त",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "ए",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "ते",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "दृ",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "ढाः",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "सख्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "यस्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "तिष्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "ठ",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "त",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "जी",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "वि",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "तव्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "य",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "स",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "नि",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "नी",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "दम्",
+        "weight": "G",
+        "why": "saṃyoga (a conjunct follows)",
+        "anceps": false
+       },
+       {
+        "aksara": "भा",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "द",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "हं",
+        "weight": "G",
+        "why": "anusvāra/visarga follows",
+        "anceps": false
+       },
+       {
+        "aksara": "रो",
+        "weight": "G",
+        "why": "dīrgha (long vowel)",
+        "anceps": false
+       },
+       {
+        "aksara": "दि",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": false
+       },
+       {
+        "aksara": "मि",
+        "weight": "L",
+        "why": "hrasva, no conjunct follows",
+        "anceps": true
+       }
+      ],
+      "pattern": "GGGLLGLGLLLGGGLGGLGGGGLLGLGLLLGGGLGGLL",
+      "ganas": [
+       "म",
+       "स",
+       "ज",
+       "स",
+       "त",
+       "त",
+       "म",
+       "भ",
+       "र",
+       "न",
+       "म",
+       "य",
+       "ल",
+       "ल"
+      ],
+      "matra": 59,
+      "uddishta": 215734175577,
+      "length": 38
+     }
+    ],
+    "metre": {
+     "metre": null,
+     "kind": null,
+     "per_pada": [
+      null
+     ],
+     "note": "no listed metre fits; the pattern and the prastāra index are still exact",
+     "deviations": [],
+     "strict": null,
+     "tolerant": null
+    },
+    "explanation": [
+     "pāda 1: 38 syllables, GGGLLGLGLLLGGGLGGLGGGGLLGLGLLLGGGLGGLL (म स ज स त त म भ र न म य ल ल), 59 mātrās, prastāra index 215734175577 of 274877906944",
+     "Weights by Piṅgala (Chandaḥśāstra, DESIGN A1: 1.4.10–12): dīrgha, anusvāra/visarga, or a following saṃyoga makes a syllable guru; the pāda-final syllable is anceps.",
+     "Metre: not identified. no listed metre fits; the pattern and the prastāra index are still exact."
+    ]
+   },
+   "note": ""
+  },
+  {
+   "id": "text-iast-1",
+   "feature": "mantra",
+   "req": {
+    "op": "text",
+    "text": "tacchūnye punarāsthitāsmi bhavane prāṇāsta ete dṛḍhāḥ sakhyastiṣṭhata jīvitavyasaninī dambhādahaṃ rodimi",
+    "script": "iast"
+   },
+   "want": {
+    "ok": true,
+    "members": [
+     "tat",
+     "śūnye",
+     "punar",
+     "āsthitā",
+     "asmi",
+     "bhavane",
+     "prāṇāḥ",
+     "te",
+     "ete",
+     "dṛḍhāḥ",
+     "sakhyaḥ",
+     "tiṣṭhata",
+     "jīvita",
+     "vyasaninī",
+     "dambhāt",
+     "aham",
+     "rodimi"
+    ],
+    "words": [
+     {
+      "form": "tat",
+      "readings": [
+       {
+        "lemma": "tad",
+        "upos": "PRON",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 10607
+       },
+       {
+        "lemma": "tad",
+        "upos": "PRON",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 10343
+       },
+       {
+        "lemma": "tad",
+        "upos": "PRON",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 7
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "śūnye",
+      "readings": [
+       {
+        "lemma": "śūnya",
+        "upos": "ADJ",
+        "case": "Loc",
+        "vibhakti": "सप्तमी",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 28
+       },
+       {
+        "lemma": "śūnya",
+        "upos": "ADJ",
+        "case": "Loc",
+        "vibhakti": "सप्तमी",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 18
+       },
+       {
+        "lemma": "śūnya",
+        "upos": "NOUN",
+        "case": "Loc",
+        "vibhakti": "सप्तमी",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 15
+       },
+       {
+        "lemma": "śūnya",
+        "upos": "ADJ",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Dual",
+        "gender": "Neut",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "punar",
+      "readings": [
+       {
+        "lemma": "punar",
+        "upos": "ADV",
+        "case": "",
+        "vibhakti": "",
+        "number": "",
+        "gender": "",
+        "count": 9557
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "āsthitā",
+      "readings": [
+       {
+        "lemma": "āsthā",
+        "upos": "VERB",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Fem",
+        "count": 21
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "asmi",
+      "readings": [
+       {
+        "lemma": "as",
+        "upos": "VERB",
+        "case": "",
+        "vibhakti": "",
+        "number": "Sing",
+        "gender": "",
+        "count": 1771
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "bhavane",
+      "readings": [
+       {
+        "lemma": "bhavana",
+        "upos": "NOUN",
+        "case": "Loc",
+        "vibhakti": "सप्तमी",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 79
+       },
+       {
+        "lemma": "bhavana",
+        "upos": "NOUN",
+        "case": "Loc",
+        "vibhakti": "सप्तमी",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "prāṇāḥ",
+      "readings": [
+       {
+        "lemma": "prāṇa",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Plur",
+        "gender": "Masc",
+        "count": 186
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "te",
+      "readings": [
+       {
+        "lemma": "tvad",
+        "upos": "PRON",
+        "case": "Gen",
+        "vibhakti": "षष्ठी",
+        "number": "Sing",
+        "gender": "",
+        "count": 10250
+       },
+       {
+        "lemma": "tad",
+        "upos": "PRON",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Plur",
+        "gender": "Masc",
+        "count": 8034
+       },
+       {
+        "lemma": "tvad",
+        "upos": "PRON",
+        "case": "Dat",
+        "vibhakti": "चतुर्थी",
+        "number": "Sing",
+        "gender": "",
+        "count": 2296
+       },
+       {
+        "lemma": "tad",
+        "upos": "PRON",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Dual",
+        "gender": "Fem",
+        "count": 116
+       },
+       {
+        "lemma": "tad",
+        "upos": "PRON",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Dual",
+        "gender": "Neut",
+        "count": 46
+       },
+       {
+        "lemma": "tad",
+        "upos": "PRON",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Dual",
+        "gender": "Neut",
+        "count": 37
+       },
+       {
+        "lemma": "tad",
+        "upos": "PRON",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Dual",
+        "gender": "Fem",
+        "count": 25
+       },
+       {
+        "lemma": "tā",
+        "upos": "NOUN",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Dual",
+        "gender": "Fem",
+        "count": 2
+       },
+       {
+        "lemma": "ta",
+        "upos": "NOUN",
+        "case": "Loc",
+        "vibhakti": "सप्तमी",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 1
+       },
+       {
+        "lemma": "te",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 1
+       },
+       {
+        "lemma": "tā",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Dual",
+        "gender": "Fem",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "ete",
+      "readings": [
+       {
+        "lemma": "etad",
+        "upos": "PRON",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Plur",
+        "gender": "Masc",
+        "count": 2000
+       },
+       {
+        "lemma": "etad",
+        "upos": "PRON",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Dual",
+        "gender": "Neut",
+        "count": 21
+       },
+       {
+        "lemma": "etad",
+        "upos": "PRON",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Dual",
+        "gender": "Fem",
+        "count": 10
+       },
+       {
+        "lemma": "etad",
+        "upos": "PRON",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Dual",
+        "gender": "Neut",
+        "count": 5
+       },
+       {
+        "lemma": "etad",
+        "upos": "PRON",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Dual",
+        "gender": "Fem",
+        "count": 4
+       },
+       {
+        "lemma": "e",
+        "upos": "VERB",
+        "case": "Loc",
+        "vibhakti": "सप्तमी",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 1
+       },
+       {
+        "lemma": "eta",
+        "upos": "NOUN",
+        "case": "Loc",
+        "vibhakti": "सप्तमी",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "dṛḍhāḥ",
+      "readings": [
+       {
+        "lemma": "dṛḍha",
+        "upos": "ADJ",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Plur",
+        "gender": "Masc",
+        "count": 12
+       },
+       {
+        "lemma": "dṛḍha",
+        "upos": "ADJ",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Plur",
+        "gender": "Fem",
+        "count": 1
+       },
+       {
+        "lemma": "dṛḍha",
+        "upos": "ADJ",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Plur",
+        "gender": "Fem",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "sakhyaḥ",
+      "readings": [
+       {
+        "lemma": "sakhī",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Plur",
+        "gender": "Fem",
+        "count": 23
+       },
+       {
+        "lemma": "sakhī",
+        "upos": "NOUN",
+        "case": "Voc",
+        "vibhakti": "सम्बोधनम्",
+        "number": "Plur",
+        "gender": "Fem",
+        "count": 6
+       },
+       {
+        "lemma": "sakhya",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 2
+       },
+       {
+        "lemma": "sakhī",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Plur",
+        "gender": "",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "tiṣṭhata",
+      "readings": [
+       {
+        "lemma": "sthā",
+        "upos": "VERB",
+        "case": "",
+        "vibhakti": "",
+        "number": "Plur",
+        "gender": "",
+        "count": 20
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "jīvita",
+      "readings": [
+       {
+        "lemma": "jīvita",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 207
+       }
+      ],
+      "compound_member": true
+     },
+     {
+      "form": "vyasaninī",
+      "readings": [
+       {
+        "lemma": "vyasanin",
+        "upos": "ADJ",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Fem",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "dambhāt",
+      "readings": [
+       {
+        "lemma": "dambha",
+        "upos": "NOUN",
+        "case": "Abl",
+        "vibhakti": "पञ्चमी",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 6
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "aham",
+      "readings": [
+       {
+        "lemma": "mad",
+        "upos": "PRON",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "",
+        "count": 8877
+       },
+       {
+        "lemma": "aha",
+        "upos": "NOUN",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Masc",
+        "count": 503
+       },
+       {
+        "lemma": "aha",
+        "upos": "NOUN",
+        "case": "Nom",
+        "vibhakti": "प्रथमा",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 18
+       },
+       {
+        "lemma": "aha",
+        "upos": "NOUN",
+        "case": "Acc",
+        "vibhakti": "द्वितीया",
+        "number": "Sing",
+        "gender": "Neut",
+        "count": 2
+       },
+       {
+        "lemma": "aham",
+        "upos": "NOUN",
+        "case": "Cpd",
+        "vibhakti": "समास-पूर्वपदम्",
+        "number": "",
+        "gender": "",
+        "count": 1
+       }
+      ],
+      "compound_member": false
+     },
+     {
+      "form": "rodimi",
+      "readings": [
+       {
+        "lemma": "rud",
+        "upos": "VERB",
+        "case": "",
+        "vibhakti": "",
+        "number": "Sing",
+        "gender": "",
+        "count": 6
+       }
+      ],
+      "compound_member": false
+     }
+    ],
+    "links": [
+     {
+      "from": 6,
+      "to": 7,
+      "kind": "agreement",
+      "features": [
+       [
+        "Nom",
+        "Plur",
+        "Masc"
+       ]
+      ]
+     },
+     {
+      "from": 7,
+      "to": 8,
+      "kind": "agreement",
+      "features": [
+       [
+        "Acc",
+        "Dual",
+        "Fem"
+       ],
+       [
+        "Acc",
+        "Dual",
+        "Neut"
+       ],
+       [
+        "Loc",
+        "Sing",
+        "Masc"
+       ],
+       [
+        "Nom",
+        "Dual",
+        "Fem"
+       ],
+       [
+        "Nom",
+        "Dual",
+        "Neut"
+       ],
+       [
+        "Nom",
+        "Plur",
+        "Masc"
+       ]
+      ]
+     },
+     {
+      "from": 8,
+      "to": 9,
+      "kind": "agreement",
+      "features": [
+       [
+        "Nom",
+        "Plur",
+        "Masc"
+       ]
+      ]
+     },
+     {
+      "from": 9,
+      "to": 10,
+      "kind": "agreement",
+      "features": [
+       [
+        "Nom",
+        "Plur",
+        "Fem"
+       ]
+      ]
+     },
+     {
+      "from": 12,
+      "to": 13,
+      "kind": "samāsa"
+     }
+    ],
+    "mode": "soft",
+    "note": "agreement and samāsa links only; these are not dependency arcs (no syntactic parser in v1)"
+   },
+   "note": ""
+  },
+  {
+   "id": "struct-iast-1",
+   "feature": "mantra",
+   "req": {
+    "op": "structure",
+    "text": "tacchūnye punarāsthitāsmi bhavane prāṇāsta ete dṛḍhāḥ sakhyastiṣṭhata jīvitavyasaninī dambhādahaṃ rodimi",
+    "script": "iast"
+   },
+   "want": {
+    "ok": true,
+    "figures": [],
+    "note": "verified = every scored held-out item found, 0 false positives; the number of held-out examples is shown, and n = 1 is not robust"
+   },
+   "note": ""
+  },
+  {
+   "id": "words",
+   "feature": "generator",
+   "req": {
+    "op": "words"
+   },
+   "want": {
+    "ok": true,
+    "words": {
+     "DEF": "लक्षणम्",
+     "LAW": "विधिः",
+     "RATE": "परिणामः",
+     "SECTION": "प्रकरणम्",
+     "SUM": "सङ्कलनम्",
+     "PROD": "घातः",
+     "POW": "घातांकः",
+     "DERIV": "अवकलनम्",
+     "INT": "समाकलनम्",
+     "NEG": "ऋणम्",
+     "INF": "अनन्तम्",
+     "LIM": "पर्यन्तः",
+     "EQUALS": "=",
+     "END": "।",
+     "BOUND0": "नीलकः",
+     "BOUND1": "पीतकः",
+     "BOUND2": "लोहितकः",
+     "BOUND3": "हरितकः",
+     "BOUND4": "श्वेतकः",
+     "BOUND5": "चित्रकः",
+     "BOUND6": "पिङ्गलः",
+     "BOUND7": "पाटलकः",
+     "BOUND8": "शबलकः",
+     "BOUND9": "श्यामलकः",
+     "ROUND": "आसन्नम्",
+     "ROUND_DOWN": "ऊनम्",
+     "ITER": "आवर्तनम्",
+     "UNTIL": "अवसानम्",
+     "BUDGET": "अवधि",
+     "LET": "कल्पितम्",
+     "ITER_GLOSS": "असकृत्",
+     "ROUND_GLOSS": "स्थूलम्"
+    },
+    "table": {
+     "a": [
+      "अक",
+      "var",
+      "m"
+     ],
+     "b": [
+      "ब",
+      "var",
+      "m"
+     ],
+     "c": [
+      "च",
+      "var",
+      "m"
+     ],
+     "f": [
+      "फ",
+      "var",
+      "m"
+     ],
+     "g": [
+      "ग",
+      "var",
+      "m"
+     ],
+     "h": [
+      "ह",
+      "var",
+      "m"
+     ],
+     "j": [
+      "ज",
+      "var",
+      "m"
+     ],
+     "k": [
+      "क",
+      "var",
+      "m"
+     ],
+     "l": [
+      "ल",
+      "var",
+      "m"
+     ],
+     "m": [
+      "म",
+      "var",
+      "m"
+     ],
+     "n": [
+      "न",
+      "var",
+      "m"
+     ],
+     "o": [
+      "ओक",
+      "var",
+      "m"
+     ],
+     "p": [
+      "प",
+      "var",
+      "m"
+     ],
+     "q": [
+      "कक",
+      "var",
+      "m"
+     ],
+     "r": [
+      "र",
+      "var",
+      "m"
+     ],
+     "s": [
+      "स",
+      "var",
+      "m"
+     ],
+     "t": [
+      "त",
+      "var",
+      "m"
+     ],
+     "u": [
+      "उक",
+      "var",
+      "m"
+     ],
+     "v": [
+      "व",
+      "var",
+      "m"
+     ],
+     "w": [
+      "वव",
+      "var",
+      "m"
+     ],
+     "x": [
+      "क्ष",
+      "var",
+      "m"
+     ],
+     "y": [
+      "य",
+      "var",
+      "m"
+     ],
+     "z": [
+      "जज",
+      "var",
+      "m"
+     ],
+     "A": [
+      "अकक",
+      "var",
+      "m"
+     ],
+     "B": [
+      "भ",
+      "var",
+      "m"
+     ],
+     "C": [
+      "छ",
+      "var",
+      "m"
+     ],
+     "D": [
+      "ड",
+      "var",
+      "m"
+     ],
+     "E": [
+      "एक",
+      "var",
+      "m"
+     ],
+     "F": [
+      "फफ",
+      "var",
+      "m"
+     ],
+     "G": [
+      "घ",
+      "var",
+      "m"
+     ],
+     "H": [
+      "हह",
+      "var",
+      "m"
+     ],
+     "I": [
+      "इक",
+      "var",
+      "m"
+     ],
+     "J": [
+      "झ",
+      "var",
+      "m"
+     ],
+     "K": [
+      "ख",
+      "var",
+      "m"
+     ],
+     "L": [
+      "लल",
+      "var",
+      "m"
+     ],
+     "M": [
+      "मम",
+      "var",
+      "m"
+     ],
+     "N": [
+      "ण",
+      "var",
+      "m"
+     ],
+     "O": [
+      "ओकक",
+      "var",
+      "m"
+     ],
+     "P": [
+      "फप",
+      "var",
+      "m"
+     ],
+     "Q": [
+      "ककक",
+      "var",
+      "m"
+     ],
+     "R": [
+      "रर",
+      "var",
+      "m"
+     ],
+     "S": [
+      "श",
+      "var",
+      "m"
+     ],
+     "T": [
+      "ट",
+      "var",
+      "m"
+     ],
+     "U": [
+      "उकक",
+      "var",
+      "m"
+     ],
+     "V": [
+      "ववक",
+      "var",
+      "m"
+     ],
+     "W": [
+      "ववव",
+      "var",
+      "m"
+     ],
+     "X": [
+      "क्षक",
+      "var",
+      "m"
+     ],
+     "Y": [
+      "यय",
+      "var",
+      "m"
+     ],
+     "Z": [
+      "जजज",
+      "var",
+      "m"
+     ],
+     "\\alpha": [
+      "अल्फ",
+      "var",
+      "m"
+     ],
+     "\\beta": [
+      "बीट",
+      "var",
+      "m"
+     ],
+     "\\gamma": [
+      "गाम",
+      "var",
+      "m"
+     ],
+     "\\delta": [
+      "डेल्ट",
+      "var",
+      "m"
+     ],
+     "\\epsilon": [
+      "एप्सिलोन",
+      "var",
+      "m"
+     ],
+     "\\theta": [
+      "थीट",
+      "var",
+      "m"
+     ],
+     "\\kappa": [
+      "काप्प",
+      "var",
+      "m"
+     ],
+     "\\lambda": [
+      "लम्ब्द",
+      "var",
+      "m"
+     ],
+     "\\mu": [
+      "म्युक",
+      "var",
+      "m"
+     ],
+     "\\nu": [
+      "न्युक",
+      "var",
+      "m"
+     ],
+     "\\xi": [
+      "क्सिक",
+      "var",
+      "m"
+     ],
+     "\\rho": [
+      "रोक",
+      "var",
+      "m"
+     ],
+     "\\sigma": [
+      "सिग्म",
+      "var",
+      "m"
+     ],
+     "\\tau": [
+      "टौक",
+      "var",
+      "m"
+     ],
+     "\\phi": [
+      "फिक",
+      "var",
+      "m"
+     ],
+     "\\chi": [
+      "किक",
+      "var",
+      "m"
+     ],
+     "\\psi": [
+      "प्सिक",
+      "var",
+      "m"
+     ],
+     "\\omega": [
+      "ओमेग",
+      "var",
+      "m"
+     ],
+     "\\Gamma": [
+      "गामग",
+      "var",
+      "m"
+     ],
+     "\\Delta": [
+      "डेल्टग",
+      "var",
+      "m"
+     ],
+     "\\Theta": [
+      "थीटग",
+      "var",
+      "m"
+     ],
+     "\\Lambda": [
+      "लम्ब्दग",
+      "var",
+      "m"
+     ],
+     "\\Sigma": [
+      "सिग्मग",
+      "var",
+      "m"
+     ],
+     "\\Phi": [
+      "फिग",
+      "var",
+      "m"
+     ],
+     "\\Psi": [
+      "प्सिग",
+      "var",
+      "m"
+     ],
+     "\\Omega": [
+      "ओमेगग",
+      "var",
+      "m"
+     ]
+    }
+   },
+   "note": ""
+  },
+  {
+   "id": "ref-badop",
+   "feature": "generator",
+   "req": {
+    "op": "frobnicate"
+   },
+   "want": {
+    "ok": false,
+    "code": 935,
+    "name": "Unsupported",
+    "why": "KeyError: 'text'"
+   },
+   "note": ""
+  },
+  {
+   "id": "ref-undeclared",
+   "feature": "generator",
+   "req": {
+    "op": "value",
+    "text": "क्ष",
+    "env": {},
+    "vals": {},
+    "digits": 20
+   },
+   "want": {
+    "ok": false,
+    "code": 928,
+    "name": "UnknownWord",
+    "why": "0x3a0 UnknownWord: क्ष (wanted the nom case)"
+   },
+   "note": ""
+  },
+  {
+   "id": "ref-parse-garbage",
+   "feature": "editor",
+   "req": {
+    "op": "from_sutra",
+    "text": "abc"
+   },
+   "want": {
+    "ok": false,
+    "code": 928,
+    "name": "UnknownWord",
+    "why": "0x3a0 UnknownWord: abc (wanted the nom case)"
+   },
+   "note": ""
+  },
+  {
+   "id": "ref-parse-empty",
+   "feature": "editor",
+   "req": {
+    "op": "from_sutra",
+    "text": ""
+   },
+   "want": {
+    "ok": false,
+    "code": 929,
+    "name": "MalformedSutra",
+    "why": "0x3a1 MalformedSutra: words are separated by exactly one space"
+   },
+   "note": ""
+  },
+  {
+   "id": "ref-plain-garbage",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "x+*",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": false,
+    "code": 929,
+    "name": "MalformedSutra",
+    "why": "0x3a1 MalformedSutra: '·' cannot start a term"
+   },
+   "note": ""
+  },
+  {
+   "id": "ref-plain-empty",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": false,
+    "code": 929,
+    "name": "MalformedSutra",
+    "why": "0x3a1 MalformedSutra: expected None, found None"
+   },
+   "note": ""
+  },
+  {
+   "id": "ref-latex-unsupported",
+   "feature": "editor",
+   "req": {
+    "op": "from_input",
+    "input": "\\int_0^1 x\\,dx",
+    "kind": "latex"
+   },
+   "want": {
+    "ok": false,
+    "code": 935,
+    "name": "Unsupported",
+    "why": "0x3a7 Unsupported: no free letter for a bound variable"
+   },
+   "note": ""
+  },
+  {
+   "id": "ref-doc-garbage",
+   "feature": "editor",
+   "req": {
+    "op": "parse",
+    "text": "zzz"
+   },
+   "want": {
+    "ok": false,
+    "code": 929,
+    "name": "MalformedSutra",
+    "why": "0x3a1 MalformedSutra: a document ends with a newline"
+   },
+   "note": ""
+  },
+  {
+   "id": "ref-sample-pole",
+   "feature": "explorer",
+   "req": {
+    "op": "sample",
+    "text": "x",
+    "env": {},
+    "axes": [
+     {
+      "name": "क्ष",
+      "lo": "0",
+      "hi": "1",
+      "n": 2
+     }
+    ]
+   },
+   "want": {
+    "ok": false,
+    "code": 928,
+    "name": "UnknownWord",
+    "why": "0x3a0 UnknownWord: x (wanted the nom case)"
+   },
+   "note": ""
+  },
+  {
+   "id": "ph-boltzmann-in",
+   "feature": "physics",
+   "req": {
+    "op": "from_input",
+    "input": "e^(-E/(k*T))",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः ळचखस्य घातेन ३ ऋणम् १ एकः घातांकः घातस्य २ कः टः ऋणम् १",
+    "declarations": "प्रकरणम् एकः ळञख कः ळञख टः ळञख ।",
+    "latex": "e^{-\\frac{E}{k \\cdot T}}",
+    "gloss_en": "the power, with exponent minus the product of E and the reciprocal of the product of k and T, of e",
+    "gloss_sa": "ळचखस्य ((एकः, ((कः, टः च — एषां घातः) इत्यस्य व्युत्क्रमः) च — एषां घातः) इत्यस्य ऋणम्) इत्यनेन घातांकेन घातः",
+    "resolved": [
+     {
+      "identifier": "E",
+      "stem": "एक",
+      "reading": "variable"
+     },
+     {
+      "identifier": "k",
+      "stem": "क",
+      "reading": "variable"
+     },
+     {
+      "identifier": "T",
+      "stem": "ट",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "एक": [
+      "var",
+      0,
+      "m"
+     ],
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ट": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "E",
+     "k",
+     "T"
+    ]
+   },
+   "note": "Boltzmann factor (relative occupation)"
+  },
+  {
+   "id": "ph-boltzmann-val",
+   "feature": "physics",
+   "req": {
+    "op": "value",
+    "text": "घातांकः ळचखस्य घातेन ३ ऋणम् १ एकः घातांकः घातस्य २ कः टः ऋणम् १",
+    "env": {
+     "एक": [
+      "var",
+      0,
+      "m"
+     ],
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ट": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "एक": "2",
+     "क": "1",
+     "ट": "4"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "0.606530659712633423603799534991",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Boltzmann factor (relative occupation); vals={'E': '2', 'k': '1', 'T': '4'}"
+  },
+  {
+   "id": "ph-boltzmann-smp",
+   "feature": "physics",
+   "req": {
+    "op": "sample",
+    "text": "घातांकः ळचखस्य घातेन ३ ऋणम् १ एकः घातांकः घातस्य २ कः टः ऋणम् १",
+    "env": {
+     "एक": [
+      "var",
+      0,
+      "m"
+     ],
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ट": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "ट",
+      "lo": "1",
+      "hi": "10",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "एक": "2",
+     "क": "1"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "8af248395334397d7776addfae68cd8be3258e6dee8035ff20e907600c5c5004",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Boltzmann factor (relative occupation); axis T"
+  },
+  {
+   "id": "ph-boltzmann-doc",
+   "feature": "physics",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् एकः ळञख कः ळञख टः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातांकः ळचखस्य घातेन ३ ऋणम् १ एकः घातांकः घातस्य २ कः टः ऋणम् १ ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् एकः ळञख कः ळञख टः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातांकः ळचखस्य घातेन ३ ऋणम् १ एकः घातांकः घातस्य २ कः टः ऋणम् १ ।\n",
+    "sections": 1
+   },
+   "note": "Boltzmann factor (relative occupation); document with a definition line"
+  },
+  {
+   "id": "ph-planck-in",
+   "feature": "physics",
+   "req": {
+    "op": "from_input",
+    "input": "x^3/(e^x-1)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ घातांकः क्षस्य ३ घातांकः सङ्कलनस्य २ ऋणम् १ घातांकः ळचखस्य क्षेण ऋणम् १",
+    "declarations": "प्रकरणम् क्षः ळञख ।",
+    "latex": "\\frac{x^{3}}{-1 + e^{x}}",
+    "gloss_en": "the cube of x divided by the sum of minus 1 and the power, with exponent x, of e",
+    "gloss_sa": "(क्षस्य (३) इत्यनेन घातांकेन घातः), ((ऋणम् १, (ळचखस्य क्षेण घातांकेन घातः) च — एषां सङ्कलनम्) इत्यस्य व्युत्क्रमः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x"
+    ]
+   },
+   "note": "Planck law, dimensionless spectral shape"
+  },
+  {
+   "id": "ph-planck-val",
+   "feature": "physics",
+   "req": {
+    "op": "value",
+    "text": "घातः २ घातांकः क्षस्य ३ घातांकः सङ्कलनस्य २ ऋणम् १ घातांकः ळचखस्य क्षेण ऋणम् १",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "3"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "1.41468380526391070324398365419",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Planck law, dimensionless spectral shape; vals={'x': '3'}"
+  },
+  {
+   "id": "ph-planck-smp",
+   "feature": "physics",
+   "req": {
+    "op": "sample",
+    "text": "घातः २ घातांकः क्षस्य ३ घातांकः सङ्कलनस्य २ ऋणम् १ घातांकः ळचखस्य क्षेण ऋणम् १",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क्ष",
+      "lo": "1/2",
+      "hi": "10",
+      "n": 21
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "0fedf9a5b41a9163233ba101fb63f2609c25d36697764d380928638ee517f480",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Planck law, dimensionless spectral shape; axis x"
+  },
+  {
+   "id": "ph-planck-doc",
+   "feature": "physics",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् क्षः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ घातांकः क्षस्य ३ घातांकः सङ्कलनस्य २ ऋणम् १ घातांकः ळचखस्य क्षेण ऋणम् १ ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् क्षः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ घातांकः क्षस्य ३ घातांकः सङ्कलनस्य २ ऋणम् १ घातांकः ळचखस्य क्षेण ऋणम् १ ।\n",
+    "sections": 1
+   },
+   "note": "Planck law, dimensionless spectral shape; document with a definition line"
+  },
+  {
+   "id": "ph-lorentz-in",
+   "feature": "physics",
+   "req": {
+    "op": "from_input",
+    "input": "1/sqrt(1-v^2)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः घातांकस्य सङ्कलनस्य २ १ घातः २ ऋणम् १ घातांकः वस्य २ १⁄२ ऋणम् १",
+    "declarations": "प्रकरणम् वः ळञख ।",
+    "latex": "\\frac{1}{\\sqrt{1 -v^{2}}}",
+    "gloss_en": "the reciprocal of the square root of the sum of 1 and minus the square of v",
+    "gloss_sa": "((१, ((वस्य (२) इत्यनेन घातांकेन घातः) इत्यस्य ऋणम्) च — एषां सङ्कलनम्) इत्यस्य वर्गमूलम्) इत्यस्य व्युत्क्रमः",
+    "resolved": [
+     {
+      "identifier": "v",
+      "stem": "व",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "व": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "v"
+    ]
+   },
+   "note": "Lorentz factor, v in units of c"
+  },
+  {
+   "id": "ph-lorentz-val",
+   "feature": "physics",
+   "req": {
+    "op": "value",
+    "text": "घातांकः घातांकस्य सङ्कलनस्य २ १ घातः २ ऋणम् १ घातांकः वस्य २ १⁄२ ऋणम् १",
+    "env": {
+     "व": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "व": "3/5"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "1.25",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Lorentz factor, v in units of c; vals={'v': '3/5'}"
+  },
+  {
+   "id": "ph-lorentz-smp",
+   "feature": "physics",
+   "req": {
+    "op": "sample",
+    "text": "घातांकः घातांकस्य सङ्कलनस्य २ १ घातः २ ऋणम् १ घातांकः वस्य २ १⁄२ ऋणम् १",
+    "env": {
+     "व": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "व",
+      "lo": "0",
+      "hi": "9/10",
+      "n": 21
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "077a4be902557162379e46e630a5c8dc9c6d08baa9f7faa153778de1882fd777",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Lorentz factor, v in units of c; axis v"
+  },
+  {
+   "id": "ph-lorentz-doc",
+   "feature": "physics",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् वः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातांकः घातांकस्य सङ्कलनस्य २ १ घातः २ ऋणम् १ घातांकः वस्य २ १⁄२ ऋणम् १ ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् वः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातांकः घातांकस्य सङ्कलनस्य २ १ घातः २ ऋणम् १ घातांकः वस्य २ १⁄२ ऋणम् १ ।\n",
+    "sections": 1
+   },
+   "note": "Lorentz factor, v in units of c; document with a definition line"
+  },
+  {
+   "id": "ph-coulomb-in",
+   "feature": "physics",
+   "req": {
+    "op": "from_input",
+    "input": "k*q*Q/r^2",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः ४ कः ककः कककः घातांकः घातांकस्य रस्य २ ऋणम् १",
+    "declarations": "प्रकरणम् कः ळञख ककः ळञख कककः ळञख रः ळञख ।",
+    "latex": "\\frac{k \\cdot q \\cdot Q}{r^{2}}",
+    "gloss_en": "the product of k, q, Q and the reciprocal of the square of r",
+    "gloss_sa": "कः, ककः, कककः, ((रस्य (२) इत्यनेन घातांकेन घातः) इत्यस्य व्युत्क्रमः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "k",
+      "stem": "क",
+      "reading": "variable"
+     },
+     {
+      "identifier": "q",
+      "stem": "कक",
+      "reading": "variable"
+     },
+     {
+      "identifier": "Q",
+      "stem": "ककक",
+      "reading": "variable"
+     },
+     {
+      "identifier": "r",
+      "stem": "र",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "कक": [
+      "var",
+      0,
+      "m"
+     ],
+     "ककक": [
+      "var",
+      0,
+      "m"
+     ],
+     "र": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "k",
+     "q",
+     "Q",
+     "r"
+    ]
+   },
+   "note": "Inverse-square force (Newton, Coulomb)"
+  },
+  {
+   "id": "ph-coulomb-val",
+   "feature": "physics",
+   "req": {
+    "op": "value",
+    "text": "घातः ४ कः ककः कककः घातांकः घातांकस्य रस्य २ ऋणम् १",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "कक": [
+      "var",
+      0,
+      "m"
+     ],
+     "ककक": [
+      "var",
+      0,
+      "m"
+     ],
+     "र": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क": "1",
+     "कक": "2",
+     "ककक": "3",
+     "र": "2"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "1.5",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Inverse-square force (Newton, Coulomb); vals={'k': '1', 'q': '2', 'Q': '3', 'r': '2'}"
+  },
+  {
+   "id": "ph-coulomb-smp",
+   "feature": "physics",
+   "req": {
+    "op": "sample",
+    "text": "घातः ४ कः ककः कककः घातांकः घातांकस्य रस्य २ ऋणम् १",
+    "env": {
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "कक": [
+      "var",
+      0,
+      "m"
+     ],
+     "ककक": [
+      "var",
+      0,
+      "m"
+     ],
+     "र": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "र",
+      "lo": "1/2",
+      "hi": "5",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "क": "1",
+     "कक": "2",
+     "ककक": "3"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "d84c0237ca78e637739292b9385548978d865493d8c9d88ceaaf61b3ac883fed",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Inverse-square force (Newton, Coulomb); axis r"
+  },
+  {
+   "id": "ph-coulomb-doc",
+   "feature": "physics",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् कः ळञख ककः ळञख कककः ळञख रः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः ४ कः ककः कककः घातांकः घातांकस्य रस्य २ ऋणम् १ ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् कः ळञख ककः ळञख कककः ळञख रः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः ४ कः ककः कककः घातांकः घातांकस्य रस्य २ ऋणम् १ ।\n",
+    "sections": 1
+   },
+   "note": "Inverse-square force (Newton, Coulomb); document with a definition line"
+  },
+  {
+   "id": "ph-oscillator-in",
+   "feature": "physics",
+   "req": {
+    "op": "from_input",
+    "input": "A*cos(w*t)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ अककः ळघकः घाते २ तः ववः",
+    "declarations": "प्रकरणम् अककः ळञख तः ळञख ववः ळञख ।",
+    "latex": "A \\cdot \\cos\\left(t \\cdot w\\right)",
+    "gloss_en": "the product of A and the cosine of the product of t and w",
+    "gloss_sa": "अककः, ((तः, ववः च — एषां घातः) इत्यत्र ळघकमानम्) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "A",
+      "stem": "अकक",
+      "reading": "variable"
+     },
+     {
+      "identifier": "t",
+      "stem": "त",
+      "reading": "variable"
+     },
+     {
+      "identifier": "w",
+      "stem": "वव",
+      "reading": "variable"
+     },
+     {
+      "identifier": "COS",
+      "stem": "ळघक",
+      "reading": "function"
+     }
+    ],
+    "env": {
+     "अकक": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ],
+     "वव": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "A",
+     "t",
+     "w"
+    ]
+   },
+   "note": "Harmonic oscillator displacement"
+  },
+  {
+   "id": "ph-oscillator-val",
+   "feature": "physics",
+   "req": {
+    "op": "value",
+    "text": "घातः २ अककः ळघकः घाते २ तः ववः",
+    "env": {
+     "अकक": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ],
+     "वव": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "अकक": "2",
+     "वव": "3",
+     "त": "1/2"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "0.141474403335405820176379702869",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Harmonic oscillator displacement; vals={'A': '2', 'w': '3', 't': '1/2'}"
+  },
+  {
+   "id": "ph-oscillator-smp",
+   "feature": "physics",
+   "req": {
+    "op": "sample",
+    "text": "घातः २ अककः ळघकः घाते २ तः ववः",
+    "env": {
+     "अकक": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ],
+     "वव": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "त",
+      "lo": "0",
+      "hi": "6",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "अकक": "2",
+     "वव": "3"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "39dafe2ed74a1da2aa712b4efb4bd437de775406004522e3cc76d31e169e6de6",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Harmonic oscillator displacement; axis t"
+  },
+  {
+   "id": "ph-oscillator-doc",
+   "feature": "physics",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् अककः ळञख तः ळञख ववः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ अककः ळघकः घाते २ तः ववः ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् अककः ळञख तः ळञख ववः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ अककः ळघकः घाते २ तः ववः ।\n",
+    "sections": 1
+   },
+   "note": "Harmonic oscillator displacement; document with a definition line"
+  },
+  {
+   "id": "ph-gauss-in",
+   "feature": "physics",
+   "req": {
+    "op": "from_input",
+    "input": "e^(-x^2/(2*s^2))",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातांकः ळचखस्य घातेन ३ ऋणम् १ घातांकः क्षस्य २ घातांकः घातस्य २ २ घातांकः सस्य २ ऋणम् १",
+    "declarations": "प्रकरणम् क्षः ळञख सः ळञख ।",
+    "latex": "e^{-\\frac{x^{2}}{2 \\cdot s^{2}}}",
+    "gloss_en": "the power, with exponent minus the product of the square of x and the reciprocal of the product of 2 and the square of s, of e",
+    "gloss_sa": "ळचखस्य (((क्षस्य (२) इत्यनेन घातांकेन घातः), ((२, (सस्य (२) इत्यनेन घातांकेन घातः) च — एषां घातः) इत्यस्य व्युत्क्रमः) च — एषां घातः) इत्यस्य ऋणम्) इत्यनेन घातांकेन घातः",
+    "resolved": [
+     {
+      "identifier": "x",
+      "stem": "क्ष",
+      "reading": "variable"
+     },
+     {
+      "identifier": "s",
+      "stem": "स",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ],
+     "स": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "x",
+     "s"
+    ]
+   },
+   "note": "Gaussian wave-packet envelope"
+  },
+  {
+   "id": "ph-gauss-val",
+   "feature": "physics",
+   "req": {
+    "op": "value",
+    "text": "घातांकः ळचखस्य घातेन ३ ऋणम् १ घातांकः क्षस्य २ घातांकः घातस्य २ २ घातांकः सस्य २ ऋणम् १",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ],
+     "स": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "क्ष": "1",
+     "स": "2"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "0.882496902584595402864892143229",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Gaussian wave-packet envelope; vals={'x': '1', 's': '2'}"
+  },
+  {
+   "id": "ph-gauss-smp",
+   "feature": "physics",
+   "req": {
+    "op": "sample",
+    "text": "घातांकः ळचखस्य घातेन ३ ऋणम् १ घातांकः क्षस्य २ घातांकः घातस्य २ २ घातांकः सस्य २ ऋणम् १",
+    "env": {
+     "क्ष": [
+      "var",
+      0,
+      "m"
+     ],
+     "स": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क्ष",
+      "lo": "-5",
+      "hi": "5",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "स": "2"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "7b29a3d14e87577dbd4dce4af32a6dd06624ba295f66161d852c30f2bd70b023",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Gaussian wave-packet envelope; axis x"
+  },
+  {
+   "id": "ph-gauss-doc",
+   "feature": "physics",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् क्षः ळञख सः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातांकः ळचखस्य घातेन ३ ऋणम् १ घातांकः क्षस्य २ घातांकः घातस्य २ २ घातांकः सस्य २ ऋणम् १ ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् क्षः ळञख सः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातांकः ळचखस्य घातेन ३ ऋणम् १ घातांकः क्षस्य २ घातांकः घातस्य २ २ घातांकः सस्य २ ऋणम् १ ।\n",
+    "sections": 1
+   },
+   "note": "Gaussian wave-packet envelope; document with a definition line"
+  },
+  {
+   "id": "ch-arrhenius-in",
+   "feature": "chemistry",
+   "req": {
+    "op": "from_input",
+    "input": "A*e^(-E/(R*T))",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ अककः घातांकः ळचखस्य घातेन ३ ऋणम् १ एकः घातांकः घातस्य २ टः ररः ऋणम् १",
+    "declarations": "प्रकरणम् अककः ळञख एकः ळञख टः ळञख ररः ळञख ।",
+    "latex": "A \\cdot e^{-\\frac{E}{T \\cdot R}}",
+    "gloss_en": "the product of A and the power, with exponent minus the product of E and the reciprocal of the product of T and R, of e",
+    "gloss_sa": "अककः, (ळचखस्य ((एकः, ((टः, ररः च — एषां घातः) इत्यस्य व्युत्क्रमः) च — एषां घातः) इत्यस्य ऋणम्) इत्यनेन घातांकेन घातः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "A",
+      "stem": "अकक",
+      "reading": "variable"
+     },
+     {
+      "identifier": "E",
+      "stem": "एक",
+      "reading": "variable"
+     },
+     {
+      "identifier": "T",
+      "stem": "ट",
+      "reading": "variable"
+     },
+     {
+      "identifier": "R",
+      "stem": "रर",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "अकक": [
+      "var",
+      0,
+      "m"
+     ],
+     "एक": [
+      "var",
+      0,
+      "m"
+     ],
+     "ट": [
+      "var",
+      0,
+      "m"
+     ],
+     "रर": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "A",
+     "E",
+     "T",
+     "R"
+    ]
+   },
+   "note": "Arrhenius rate constant"
+  },
+  {
+   "id": "ch-arrhenius-val",
+   "feature": "chemistry",
+   "req": {
+    "op": "value",
+    "text": "घातः २ अककः घातांकः ळचखस्य घातेन ३ ऋणम् १ एकः घातांकः घातस्य २ टः ररः ऋणम् १",
+    "env": {
+     "अकक": [
+      "var",
+      0,
+      "m"
+     ],
+     "एक": [
+      "var",
+      0,
+      "m"
+     ],
+     "ट": [
+      "var",
+      0,
+      "m"
+     ],
+     "रर": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "अकक": "10",
+     "एक": "5",
+     "रर": "2",
+     "ट": "3"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "4.34598208507078223161274483124",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Arrhenius rate constant; vals={'A': '10', 'E': '5', 'R': '2', 'T': '3'}"
+  },
+  {
+   "id": "ch-arrhenius-smp",
+   "feature": "chemistry",
+   "req": {
+    "op": "sample",
+    "text": "घातः २ अककः घातांकः ळचखस्य घातेन ३ ऋणम् १ एकः घातांकः घातस्य २ टः ररः ऋणम् १",
+    "env": {
+     "अकक": [
+      "var",
+      0,
+      "m"
+     ],
+     "एक": [
+      "var",
+      0,
+      "m"
+     ],
+     "ट": [
+      "var",
+      0,
+      "m"
+     ],
+     "रर": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "ट",
+      "lo": "1",
+      "hi": "20",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "अकक": "10",
+     "एक": "5",
+     "रर": "2"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "63e6337d93f9d7130b45d7d3f200ab2c1f25d8065fb55d23ad473c999b651bda",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Arrhenius rate constant; axis T"
+  },
+  {
+   "id": "ch-arrhenius-doc",
+   "feature": "chemistry",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् अककः ळञख एकः ळञख टः ळञख ररः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ अककः घातांकः ळचखस्य घातेन ३ ऋणम् १ एकः घातांकः घातस्य २ टः ररः ऋणम् १ ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् अककः ळञख एकः ळञख टः ळञख ररः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ अककः घातांकः ळचखस्य घातेन ३ ऋणम् १ एकः घातांकः घातस्य २ टः ररः ऋणम् १ ।\n",
+    "sections": 1
+   },
+   "note": "Arrhenius rate constant; document with a definition line"
+  },
+  {
+   "id": "ch-nernst-in",
+   "feature": "chemistry",
+   "req": {
+    "op": "from_input",
+    "input": "U-(R*T/(n*F))*log(Q)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "सङ्कलनम् २ उककः घातः ५ ऋणम् १ टः ररः ळखकः ककके घातांकः घातस्य २ नः फफः ऋणम् १",
+    "declarations": "प्रकरणम् उककः ळञख टः ळञख ररः ळञख कककः ळञख नः ळञख फफः ळञख ।",
+    "latex": "U -\\frac{T \\cdot R \\cdot \\log\\left(Q\\right)}{n \\cdot F}",
+    "gloss_en": "the sum of U and minus the product of T, R, the natural logarithm of Q and the reciprocal of the product of n and F",
+    "gloss_sa": "उककः, ((टः, ररः, (ककके ळखकमानम्), ((नः, फफः च — एषां घातः) इत्यस्य व्युत्क्रमः) च — एषां घातः) इत्यस्य ऋणम्) च — एषां सङ्कलनम्",
+    "resolved": [
+     {
+      "identifier": "U",
+      "stem": "उकक",
+      "reading": "variable"
+     },
+     {
+      "identifier": "T",
+      "stem": "ट",
+      "reading": "variable"
+     },
+     {
+      "identifier": "R",
+      "stem": "रर",
+      "reading": "variable"
+     },
+     {
+      "identifier": "Q",
+      "stem": "ककक",
+      "reading": "variable"
+     },
+     {
+      "identifier": "n",
+      "stem": "न",
+      "reading": "variable"
+     },
+     {
+      "identifier": "F",
+      "stem": "फफ",
+      "reading": "variable"
+     },
+     {
+      "identifier": "LOG",
+      "stem": "ळखक",
+      "reading": "function"
+     }
+    ],
+    "env": {
+     "उकक": [
+      "var",
+      0,
+      "m"
+     ],
+     "ट": [
+      "var",
+      0,
+      "m"
+     ],
+     "रर": [
+      "var",
+      0,
+      "m"
+     ],
+     "ककक": [
+      "var",
+      0,
+      "m"
+     ],
+     "न": [
+      "var",
+      0,
+      "m"
+     ],
+     "फफ": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "U",
+     "T",
+     "R",
+     "Q",
+     "n",
+     "F"
+    ]
+   },
+   "note": "Nernst potential"
+  },
+  {
+   "id": "ch-nernst-val",
+   "feature": "chemistry",
+   "req": {
+    "op": "value",
+    "text": "सङ्कलनम् २ उककः घातः ५ ऋणम् १ टः ररः ळखकः ककके घातांकः घातस्य २ नः फफः ऋणम् १",
+    "env": {
+     "उकक": [
+      "var",
+      0,
+      "m"
+     ],
+     "ट": [
+      "var",
+      0,
+      "m"
+     ],
+     "रर": [
+      "var",
+      0,
+      "m"
+     ],
+     "ककक": [
+      "var",
+      0,
+      "m"
+     ],
+     "न": [
+      "var",
+      0,
+      "m"
+     ],
+     "फफ": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "उकक": "3",
+     "रर": "1",
+     "ट": "2",
+     "न": "2",
+     "फफ": "5",
+     "ककक": "7"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "2.61081797018893733897892945131",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Nernst potential; vals={'U': '3', 'R': '1', 'T': '2', 'n': '2', 'F': '5', 'Q': '7'}"
+  },
+  {
+   "id": "ch-nernst-smp",
+   "feature": "chemistry",
+   "req": {
+    "op": "sample",
+    "text": "सङ्कलनम् २ उककः घातः ५ ऋणम् १ टः ररः ळखकः ककके घातांकः घातस्य २ नः फफः ऋणम् १",
+    "env": {
+     "उकक": [
+      "var",
+      0,
+      "m"
+     ],
+     "ट": [
+      "var",
+      0,
+      "m"
+     ],
+     "रर": [
+      "var",
+      0,
+      "m"
+     ],
+     "ककक": [
+      "var",
+      0,
+      "m"
+     ],
+     "न": [
+      "var",
+      0,
+      "m"
+     ],
+     "फफ": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "ककक",
+      "lo": "1/10",
+      "hi": "10",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "उकक": "3",
+     "रर": "1",
+     "ट": "2",
+     "न": "2",
+     "फफ": "5"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "55e709e4d29172208acf393bd5928f9769ba3cf0bdc2c0bac6f07e717666429a",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Nernst potential; axis Q"
+  },
+  {
+   "id": "ch-nernst-doc",
+   "feature": "chemistry",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् उककः ळञख टः ळञख ररः ळञख कककः ळञख नः ळञख फफः ळञख जजजः ळञख ।\nलक्षणम् जजजः = सङ्कलनम् २ उककः घातः ५ ऋणम् १ टः ररः ळखकः ककके घातांकः घातस्य २ नः फफः ऋणम् १ ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् उककः ळञख टः ळञख ररः ळञख कककः ळञख नः ळञख फफः ळञख जजजः ळञख ।\nलक्षणम् जजजः = सङ्कलनम् २ उककः घातः ५ ऋणम् १ टः ररः ळखकः ककके घातांकः घातस्य २ नः फफः ऋणम् १ ।\n",
+    "sections": 1
+   },
+   "note": "Nernst potential; document with a definition line"
+  },
+  {
+   "id": "ch-henderson-in",
+   "feature": "chemistry",
+   "req": {
+    "op": "from_input",
+    "input": "p+log(b/a)/log(10)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "सङ्कलनम् २ पः घातः २ ळखकः घाते २ बः घातांकः अकस्य ऋणम् १ घातांकः ळखकस्य १० ऋणम् १",
+    "declarations": "प्रकरणम् पः ळञख बः ळञख अकः ळञख ।",
+    "latex": "p + \\frac{\\log\\left(\\frac{b}{a}\\right)}{\\log\\left(10\\right)}",
+    "gloss_en": "the sum of p and the natural logarithm of b divided by a divided by the natural logarithm of 10",
+    "gloss_sa": "पः, (((बः, (अकस्य व्युत्क्रमः) च — एषां घातः) इत्यत्र ळखकमानम्), (((१०) इत्यत्र ळखकमानम्) इत्यस्य व्युत्क्रमः) च — एषां घातः) च — एषां सङ्कलनम्",
+    "resolved": [
+     {
+      "identifier": "p",
+      "stem": "प",
+      "reading": "variable"
+     },
+     {
+      "identifier": "b",
+      "stem": "ब",
+      "reading": "variable"
+     },
+     {
+      "identifier": "a",
+      "stem": "अक",
+      "reading": "variable"
+     },
+     {
+      "identifier": "LOG",
+      "stem": "ळखक",
+      "reading": "function"
+     }
+    ],
+    "env": {
+     "प": [
+      "var",
+      0,
+      "m"
+     ],
+     "ब": [
+      "var",
+      0,
+      "m"
+     ],
+     "अक": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "p",
+     "b",
+     "a"
+    ]
+   },
+   "note": "Henderson-Hasselbalch pH"
+  },
+  {
+   "id": "ch-henderson-val",
+   "feature": "chemistry",
+   "req": {
+    "op": "value",
+    "text": "सङ्कलनम् २ पः घातः २ ळखकः घाते २ बः घातांकः अकस्य ऋणम् १ घातांकः ळखकस्य १० ऋणम् १",
+    "env": {
+     "प": [
+      "var",
+      0,
+      "m"
+     ],
+     "ब": [
+      "var",
+      0,
+      "m"
+     ],
+     "अक": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "प": "5",
+     "ब": "2",
+     "अक": "1"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "5.30102999566398119521373889472",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Henderson-Hasselbalch pH; vals={'p': '5', 'b': '2', 'a': '1'}"
+  },
+  {
+   "id": "ch-henderson-smp",
+   "feature": "chemistry",
+   "req": {
+    "op": "sample",
+    "text": "सङ्कलनम् २ पः घातः २ ळखकः घाते २ बः घातांकः अकस्य ऋणम् १ घातांकः ळखकस्य १० ऋणम् १",
+    "env": {
+     "प": [
+      "var",
+      0,
+      "m"
+     ],
+     "ब": [
+      "var",
+      0,
+      "m"
+     ],
+     "अक": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "ब",
+      "lo": "1/10",
+      "hi": "10",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "प": "5",
+     "अक": "1"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "11ee071b6980e468f4e96c463d932859958ac5289338bf6a8e93c1d87f193eea",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Henderson-Hasselbalch pH; axis b"
+  },
+  {
+   "id": "ch-henderson-doc",
+   "feature": "chemistry",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् पः ळञख बः ळञख अकः ळञख जजजः ळञख ।\nलक्षणम् जजजः = सङ्कलनम् २ पः घातः २ ळखकः घाते २ बः घातांकः अकस्य ऋणम् १ घातांकः ळखकस्य १० ऋणम् १ ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् पः ळञख बः ळञख अकः ळञख जजजः ळञख ।\nलक्षणम् जजजः = सङ्कलनम् २ पः घातः २ ळखकः घाते २ बः घातांकः अकस्य ऋणम् १ घातांकः ळखकस्य १० ऋणम् १ ।\n",
+    "sections": 1
+   },
+   "note": "Henderson-Hasselbalch pH; document with a definition line"
+  },
+  {
+   "id": "ch-firstorder-in",
+   "feature": "chemistry",
+   "req": {
+    "op": "from_input",
+    "input": "c*e^(-k*t)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ चः घातांकः ळचखस्य घातेन ३ ऋणम् १ कः तः",
+    "declarations": "प्रकरणम् चः ळञख कः ळञख तः ळञख ।",
+    "latex": "c \\cdot e^{-k \\cdot t}",
+    "gloss_en": "the product of c and the power, with exponent minus the product of k and t, of e",
+    "gloss_sa": "चः, (ळचखस्य ((कः, तः च — एषां घातः) इत्यस्य ऋणम्) इत्यनेन घातांकेन घातः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "c",
+      "stem": "च",
+      "reading": "variable"
+     },
+     {
+      "identifier": "k",
+      "stem": "क",
+      "reading": "variable"
+     },
+     {
+      "identifier": "t",
+      "stem": "त",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "च": [
+      "var",
+      0,
+      "m"
+     ],
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "c",
+     "k",
+     "t"
+    ]
+   },
+   "note": "First-order decay of concentration"
+  },
+  {
+   "id": "ch-firstorder-val",
+   "feature": "chemistry",
+   "req": {
+    "op": "value",
+    "text": "घातः २ चः घातांकः ळचखस्य घातेन ३ ऋणम् १ कः तः",
+    "env": {
+     "च": [
+      "var",
+      0,
+      "m"
+     ],
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "च": "4",
+     "क": "1/2",
+     "त": "3"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "0.892520640593719315733121883056",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "First-order decay of concentration; vals={'c': '4', 'k': '1/2', 't': '3'}"
+  },
+  {
+   "id": "ch-firstorder-smp",
+   "feature": "chemistry",
+   "req": {
+    "op": "sample",
+    "text": "घातः २ चः घातांकः ळचखस्य घातेन ३ ऋणम् १ कः तः",
+    "env": {
+     "च": [
+      "var",
+      0,
+      "m"
+     ],
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "त",
+      "lo": "0",
+      "hi": "10",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "च": "4",
+     "क": "1/2"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "dd41827dbc19d122a06ba1ad6e2b59364ee1d3df9b4f7386ec4687a457d46519",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "First-order decay of concentration; axis t"
+  },
+  {
+   "id": "ch-firstorder-doc",
+   "feature": "chemistry",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् चः ळञख कः ळञख तः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ चः घातांकः ळचखस्य घातेन ३ ऋणम् १ कः तः ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् चः ळञख कः ळञख तः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ चः घातांकः ळचखस्य घातेन ३ ऋणम् १ कः तः ।\n",
+    "sections": 1
+   },
+   "note": "First-order decay of concentration; document with a definition line"
+  },
+  {
+   "id": "ch-idealgas-in",
+   "feature": "chemistry",
+   "req": {
+    "op": "from_input",
+    "input": "n*R*T/V",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः ४ टः नः ररः घातांकः ववकस्य ऋणम् १",
+    "declarations": "प्रकरणम् टः ळञख नः ळञख ररः ळञख ववकः ळञख ।",
+    "latex": "\\frac{T \\cdot n \\cdot R}{V}",
+    "gloss_en": "the product of T, n, R and the reciprocal of V",
+    "gloss_sa": "टः, नः, ररः, (ववकस्य व्युत्क्रमः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "T",
+      "stem": "ट",
+      "reading": "variable"
+     },
+     {
+      "identifier": "n",
+      "stem": "न",
+      "reading": "variable"
+     },
+     {
+      "identifier": "R",
+      "stem": "रर",
+      "reading": "variable"
+     },
+     {
+      "identifier": "V",
+      "stem": "ववक",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "ट": [
+      "var",
+      0,
+      "m"
+     ],
+     "न": [
+      "var",
+      0,
+      "m"
+     ],
+     "रर": [
+      "var",
+      0,
+      "m"
+     ],
+     "ववक": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "T",
+     "n",
+     "R",
+     "V"
+    ]
+   },
+   "note": "Ideal gas law, pressure"
+  },
+  {
+   "id": "ch-idealgas-val",
+   "feature": "chemistry",
+   "req": {
+    "op": "value",
+    "text": "घातः ४ टः नः ररः घातांकः ववकस्य ऋणम् १",
+    "env": {
+     "ट": [
+      "var",
+      0,
+      "m"
+     ],
+     "न": [
+      "var",
+      0,
+      "m"
+     ],
+     "रर": [
+      "var",
+      0,
+      "m"
+     ],
+     "ववक": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "न": "2",
+     "रर": "1",
+     "ट": "3",
+     "ववक": "4"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "1.5",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Ideal gas law, pressure; vals={'n': '2', 'R': '1', 'T': '3', 'V': '4'}"
+  },
+  {
+   "id": "ch-idealgas-smp",
+   "feature": "chemistry",
+   "req": {
+    "op": "sample",
+    "text": "घातः ४ टः नः ररः घातांकः ववकस्य ऋणम् १",
+    "env": {
+     "ट": [
+      "var",
+      0,
+      "m"
+     ],
+     "न": [
+      "var",
+      0,
+      "m"
+     ],
+     "रर": [
+      "var",
+      0,
+      "m"
+     ],
+     "ववक": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "ववक",
+      "lo": "1",
+      "hi": "10",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "न": "2",
+     "रर": "1",
+     "ट": "3"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "82e68a442399310407d041f6d78359ad5c1331eb84783c88d53522990de024f0",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Ideal gas law, pressure; axis V"
+  },
+  {
+   "id": "ch-idealgas-doc",
+   "feature": "chemistry",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् टः ळञख नः ळञख ररः ळञख ववकः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः ४ टः नः ररः घातांकः ववकस्य ऋणम् १ ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् टः ळञख नः ळञख ररः ळञख ववकः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः ४ टः नः ररः घातांकः ववकस्य ऋणम् १ ।\n",
+    "sections": 1
+   },
+   "note": "Ideal gas law, pressure; document with a definition line"
+  },
+  {
+   "id": "ch-langmuir-in",
+   "feature": "chemistry",
+   "req": {
+    "op": "from_input",
+    "input": "K*p/(1+K*p)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः ३ खः पः घातांकः सङ्कलनस्य २ १ घातः २ खः पः ऋणम् १",
+    "declarations": "प्रकरणम् खः ळञख पः ळञख ।",
+    "latex": "\\frac{K \\cdot p}{1 + K \\cdot p}",
+    "gloss_en": "the product of K, p and the reciprocal of the sum of 1 and the product of K and p",
+    "gloss_sa": "खः, पः, ((१, (खः, पः च — एषां घातः) च — एषां सङ्कलनम्) इत्यस्य व्युत्क्रमः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "K",
+      "stem": "ख",
+      "reading": "variable"
+     },
+     {
+      "identifier": "p",
+      "stem": "प",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "ख": [
+      "var",
+      0,
+      "m"
+     ],
+     "प": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "K",
+     "p"
+    ]
+   },
+   "note": "Langmuir adsorption isotherm"
+  },
+  {
+   "id": "ch-langmuir-val",
+   "feature": "chemistry",
+   "req": {
+    "op": "value",
+    "text": "घातः ३ खः पः घातांकः सङ्कलनस्य २ १ घातः २ खः पः ऋणम् १",
+    "env": {
+     "ख": [
+      "var",
+      0,
+      "m"
+     ],
+     "प": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "ख": "2",
+     "प": "3"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "0.857142857142857142857142857143",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Langmuir adsorption isotherm; vals={'K': '2', 'p': '3'}"
+  },
+  {
+   "id": "ch-langmuir-smp",
+   "feature": "chemistry",
+   "req": {
+    "op": "sample",
+    "text": "घातः ३ खः पः घातांकः सङ्कलनस्य २ १ घातः २ खः पः ऋणम् १",
+    "env": {
+     "ख": [
+      "var",
+      0,
+      "m"
+     ],
+     "प": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "प",
+      "lo": "0",
+      "hi": "10",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "ख": "2"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "66860e7064d33e29f2f9535cd89a73bdbf78d7cf1eff726002ada470a56d8494",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Langmuir adsorption isotherm; axis p"
+  },
+  {
+   "id": "ch-langmuir-doc",
+   "feature": "chemistry",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् खः ळञख पः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः ३ खः पः घातांकः सङ्कलनस्य २ १ घातः २ खः पः ऋणम् १ ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् खः ळञख पः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः ३ खः पः घातांकः सङ्कलनस्य २ १ घातः २ खः पः ऋणम् १ ।\n",
+    "sections": 1
+   },
+   "note": "Langmuir adsorption isotherm; document with a definition line"
+  },
+  {
+   "id": "bi-logistic-in",
+   "feature": "biology",
+   "req": {
+    "op": "from_input",
+    "input": "K/(1+(K/N-1)*e^(-r*t))",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ खः घातांकः सङ्कलनस्य २ १ घातः २ घातांकः ळचखस्य घातेन ३ ऋणम् १ तः रः सङ्कलनम् २ ऋणम् १ घातः २ खः घातांकः णस्य ऋणम् १ ऋणम् १",
+    "declarations": "प्रकरणम् खः ळञख तः ळञख रः ळञख णः ळञख ।",
+    "latex": "\\frac{K}{1 + e^{-t \\cdot r} \\cdot \\left(-1 + \\frac{K}{N}\\right)}",
+    "gloss_en": "K divided by the sum of 1 and the product of the power, with exponent minus the product of t and r, of e and the sum of minus 1 and K divided by N",
+    "gloss_sa": "खः, ((१, ((ळचखस्य ((तः, रः च — एषां घातः) इत्यस्य ऋणम्) इत्यनेन घातांकेन घातः), (ऋणम् १, (खः, (णस्य व्युत्क्रमः) च — एषां घातः) च — एषां सङ्कलनम्) च — एषां घातः) च — एषां सङ्कलनम्) इत्यस्य व्युत्क्रमः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "K",
+      "stem": "ख",
+      "reading": "variable"
+     },
+     {
+      "identifier": "t",
+      "stem": "त",
+      "reading": "variable"
+     },
+     {
+      "identifier": "r",
+      "stem": "र",
+      "reading": "variable"
+     },
+     {
+      "identifier": "N",
+      "stem": "ण",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "ख": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ],
+     "र": [
+      "var",
+      0,
+      "m"
+     ],
+     "ण": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "K",
+     "t",
+     "r",
+     "N"
+    ]
+   },
+   "note": "Logistic population growth"
+  },
+  {
+   "id": "bi-logistic-val",
+   "feature": "biology",
+   "req": {
+    "op": "value",
+    "text": "घातः २ खः घातांकः सङ्कलनस्य २ १ घातः २ घातांकः ळचखस्य घातेन ३ ऋणम् १ तः रः सङ्कलनम् २ ऋणम् १ घातः २ खः घातांकः णस्य ऋणम् १ ऋणम् १",
+    "env": {
+     "ख": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ],
+     "र": [
+      "var",
+      0,
+      "m"
+     ],
+     "ण": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "ख": "100",
+     "ण": "5",
+     "र": "1/2",
+     "त": "4"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "28.0004562165073916461759801309",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Logistic population growth; vals={'K': '100', 'N': '5', 'r': '1/2', 't': '4'}"
+  },
+  {
+   "id": "bi-logistic-smp",
+   "feature": "biology",
+   "req": {
+    "op": "sample",
+    "text": "घातः २ खः घातांकः सङ्कलनस्य २ १ घातः २ घातांकः ळचखस्य घातेन ३ ऋणम् १ तः रः सङ्कलनम् २ ऋणम् १ घातः २ खः घातांकः णस्य ऋणम् १ ऋणम् १",
+    "env": {
+     "ख": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ],
+     "र": [
+      "var",
+      0,
+      "m"
+     ],
+     "ण": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "त",
+      "lo": "0",
+      "hi": "20",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "ख": "100",
+     "ण": "5",
+     "र": "1/2"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "0d43e0cfae094d4600945ff5348fe839f1e387b52e4dcd2de59186491f19760a",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Logistic population growth; axis t"
+  },
+  {
+   "id": "bi-logistic-doc",
+   "feature": "biology",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् खः ळञख तः ळञख रः ळञख णः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ खः घातांकः सङ्कलनस्य २ १ घातः २ घातांकः ळचखस्य घातेन ३ ऋणम् १ तः रः सङ्कलनम् २ ऋणम् १ घातः २ खः घातांकः णस्य ऋणम् १ ऋणम् १ ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् खः ळञख तः ळञख रः ळञख णः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ खः घातांकः सङ्कलनस्य २ १ घातः २ घातांकः ळचखस्य घातेन ३ ऋणम् १ तः रः सङ्कलनम् २ ऋणम् १ घातः २ खः घातांकः णस्य ऋणम् १ ऋणम् १ ।\n",
+    "sections": 1
+   },
+   "note": "Logistic population growth; document with a definition line"
+  },
+  {
+   "id": "bi-michaelis-in",
+   "feature": "biology",
+   "req": {
+    "op": "from_input",
+    "input": "V*S/(K+S)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः ३ ववकः शः घातांकः सङ्कलनस्य २ खः शः ऋणम् १",
+    "declarations": "प्रकरणम् ववकः ळञख शः ळञख खः ळञख ।",
+    "latex": "\\frac{V \\cdot S}{K + S}",
+    "gloss_en": "the product of V, S and the reciprocal of the sum of K and S",
+    "gloss_sa": "ववकः, शः, ((खः, शः च — एषां सङ्कलनम्) इत्यस्य व्युत्क्रमः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "V",
+      "stem": "ववक",
+      "reading": "variable"
+     },
+     {
+      "identifier": "S",
+      "stem": "श",
+      "reading": "variable"
+     },
+     {
+      "identifier": "K",
+      "stem": "ख",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "ववक": [
+      "var",
+      0,
+      "m"
+     ],
+     "श": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "V",
+     "S",
+     "K"
+    ]
+   },
+   "note": "Michaelis-Menten rate"
+  },
+  {
+   "id": "bi-michaelis-val",
+   "feature": "biology",
+   "req": {
+    "op": "value",
+    "text": "घातः ३ ववकः शः घातांकः सङ्कलनस्य २ खः शः ऋणम् १",
+    "env": {
+     "ववक": [
+      "var",
+      0,
+      "m"
+     ],
+     "श": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "ववक": "10",
+     "श": "3",
+     "ख": "2"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "6.0",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Michaelis-Menten rate; vals={'V': '10', 'S': '3', 'K': '2'}"
+  },
+  {
+   "id": "bi-michaelis-smp",
+   "feature": "biology",
+   "req": {
+    "op": "sample",
+    "text": "घातः ३ ववकः शः घातांकः सङ्कलनस्य २ खः शः ऋणम् १",
+    "env": {
+     "ववक": [
+      "var",
+      0,
+      "m"
+     ],
+     "श": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "श",
+      "lo": "0",
+      "hi": "20",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "ववक": "10",
+     "ख": "2"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "6e72b20623456a4530ae0dc4739fac5f365cc3c65daf23ec27b826484acad598",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Michaelis-Menten rate; axis S"
+  },
+  {
+   "id": "bi-michaelis-doc",
+   "feature": "biology",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् ववकः ळञख शः ळञख खः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः ३ ववकः शः घातांकः सङ्कलनस्य २ खः शः ऋणम् १ ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् ववकः ळञख शः ळञख खः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः ३ ववकः शः घातांकः सङ्कलनस्य २ खः शः ऋणम् १ ।\n",
+    "sections": 1
+   },
+   "note": "Michaelis-Menten rate; document with a definition line"
+  },
+  {
+   "id": "bi-hill-in",
+   "feature": "biology",
+   "req": {
+    "op": "from_input",
+    "input": "S^2/(K^2+S^2)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ घातांकः शस्य २ घातांकः सङ्कलनस्य २ घातांकः खस्य २ घातांकः शस्य २ ऋणम् १",
+    "declarations": "प्रकरणम् शः ळञख खः ळञख ।",
+    "latex": "\\frac{S^{2}}{K^{2} + S^{2}}",
+    "gloss_en": "the square of S divided by the sum of the square of K and the square of S",
+    "gloss_sa": "(शस्य (२) इत्यनेन घातांकेन घातः), (((खस्य (२) इत्यनेन घातांकेन घातः), (शस्य (२) इत्यनेन घातांकेन घातः) च — एषां सङ्कलनम्) इत्यस्य व्युत्क्रमः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "S",
+      "stem": "श",
+      "reading": "variable"
+     },
+     {
+      "identifier": "K",
+      "stem": "ख",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "श": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "S",
+     "K"
+    ]
+   },
+   "note": "Hill equation, n = 2"
+  },
+  {
+   "id": "bi-hill-val",
+   "feature": "biology",
+   "req": {
+    "op": "value",
+    "text": "घातः २ घातांकः शस्य २ घातांकः सङ्कलनस्य २ घातांकः खस्य २ घातांकः शस्य २ ऋणम् १",
+    "env": {
+     "श": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "श": "3",
+     "ख": "2"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "0.692307692307692307692307692308",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Hill equation, n = 2; vals={'S': '3', 'K': '2'}"
+  },
+  {
+   "id": "bi-hill-smp",
+   "feature": "biology",
+   "req": {
+    "op": "sample",
+    "text": "घातः २ घातांकः शस्य २ घातांकः सङ्कलनस्य २ घातांकः खस्य २ घातांकः शस्य २ ऋणम् १",
+    "env": {
+     "श": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "श",
+      "lo": "0",
+      "hi": "10",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "ख": "2"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "12279567eaac07bb2c9b1437ea847985c86a4d8f389023c5962bc16aeded783a",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Hill equation, n = 2; axis S"
+  },
+  {
+   "id": "bi-hill-doc",
+   "feature": "biology",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् शः ळञख खः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ घातांकः शस्य २ घातांकः सङ्कलनस्य २ घातांकः खस्य २ घातांकः शस्य २ ऋणम् १ ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् शः ळञख खः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ घातांकः शस्य २ घातांकः सङ्कलनस्य २ घातांकः खस्य २ घातांकः शस्य २ ऋणम् १ ।\n",
+    "sections": 1
+   },
+   "note": "Hill equation, n = 2; document with a definition line"
+  },
+  {
+   "id": "bi-gompertz-in",
+   "feature": "biology",
+   "req": {
+    "op": "from_input",
+    "input": "K*e^(-b*e^(-c*t))",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ खः घातांकः ळचखस्य घातेन ३ ऋणम् १ बः घातांकः ळचखस्य घातेन ३ ऋणम् १ चः तः",
+    "declarations": "प्रकरणम् खः ळञख बः ळञख चः ळञख तः ळञख ।",
+    "latex": "K \\cdot e^{-b \\cdot e^{-c \\cdot t}}",
+    "gloss_en": "the product of K and the power, with exponent minus the product of b and the power, with exponent minus the product of c and t, of e, of e",
+    "gloss_sa": "खः, (ळचखस्य ((बः, (ळचखस्य ((चः, तः च — एषां घातः) इत्यस्य ऋणम्) इत्यनेन घातांकेन घातः) च — एषां घातः) इत्यस्य ऋणम्) इत्यनेन घातांकेन घातः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "K",
+      "stem": "ख",
+      "reading": "variable"
+     },
+     {
+      "identifier": "b",
+      "stem": "ब",
+      "reading": "variable"
+     },
+     {
+      "identifier": "c",
+      "stem": "च",
+      "reading": "variable"
+     },
+     {
+      "identifier": "t",
+      "stem": "त",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "ख": [
+      "var",
+      0,
+      "m"
+     ],
+     "ब": [
+      "var",
+      0,
+      "m"
+     ],
+     "च": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "K",
+     "b",
+     "c",
+     "t"
+    ]
+   },
+   "note": "Gompertz growth"
+  },
+  {
+   "id": "bi-gompertz-val",
+   "feature": "biology",
+   "req": {
+    "op": "value",
+    "text": "घातः २ खः घातांकः ळचखस्य घातेन ३ ऋणम् १ बः घातांकः ळचखस्य घातेन ३ ऋणम् १ चः तः",
+    "env": {
+     "ख": [
+      "var",
+      0,
+      "m"
+     ],
+     "ब": [
+      "var",
+      0,
+      "m"
+     ],
+     "च": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "ख": "50",
+     "ब": "2",
+     "च": "1/2",
+     "त": "3"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "32.00085704608671031603816828",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Gompertz growth; vals={'K': '50', 'b': '2', 'c': '1/2', 't': '3'}"
+  },
+  {
+   "id": "bi-gompertz-smp",
+   "feature": "biology",
+   "req": {
+    "op": "sample",
+    "text": "घातः २ खः घातांकः ळचखस्य घातेन ३ ऋणम् १ बः घातांकः ळचखस्य घातेन ३ ऋणम् १ चः तः",
+    "env": {
+     "ख": [
+      "var",
+      0,
+      "m"
+     ],
+     "ब": [
+      "var",
+      0,
+      "m"
+     ],
+     "च": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "त",
+      "lo": "0",
+      "hi": "15",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "ख": "50",
+     "ब": "2",
+     "च": "1/2"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "3ec6df5843ed946efc44520f6e56dbe2151b3a820bf9b7dd00a8e5f8eaa8922d",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Gompertz growth; axis t"
+  },
+  {
+   "id": "bi-gompertz-doc",
+   "feature": "biology",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् खः ळञख बः ळञख चः ळञख तः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ खः घातांकः ळचखस्य घातेन ३ ऋणम् १ बः घातांकः ळचखस्य घातेन ३ ऋणम् १ चः तः ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् खः ळञख बः ळञख चः ळञख तः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ खः घातांकः ळचखस्य घातेन ३ ऋणम् १ बः घातांकः ळचखस्य घातेन ३ ऋणम् १ चः तः ।\n",
+    "sections": 1
+   },
+   "note": "Gompertz growth; document with a definition line"
+  },
+  {
+   "id": "bi-hardyweinberg-in",
+   "feature": "biology",
+   "req": {
+    "op": "from_input",
+    "input": "2*p*(1-p)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः ३ २ पः सङ्कलनम् २ १ घातः २ ऋणम् १ पः",
+    "declarations": "प्रकरणम् पः ळञख ।",
+    "latex": "2 \\cdot p \\cdot \\left(1 -p\\right)",
+    "gloss_en": "the product of 2, p and the sum of 1 and minus p",
+    "gloss_sa": "२, पः, (१, (पस्य ऋणम्) च — एषां सङ्कलनम्) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "p",
+      "stem": "प",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "प": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "p"
+    ]
+   },
+   "note": "Hardy-Weinberg heterozygote frequency"
+  },
+  {
+   "id": "bi-hardyweinberg-val",
+   "feature": "biology",
+   "req": {
+    "op": "value",
+    "text": "घातः ३ २ पः सङ्कलनम् २ १ घातः २ ऋणम् १ पः",
+    "env": {
+     "प": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "प": "1/3"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "0.444444444444444444444444444444",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Hardy-Weinberg heterozygote frequency; vals={'p': '1/3'}"
+  },
+  {
+   "id": "bi-hardyweinberg-smp",
+   "feature": "biology",
+   "req": {
+    "op": "sample",
+    "text": "घातः ३ २ पः सङ्कलनम् २ १ घातः २ ऋणम् १ पः",
+    "env": {
+     "प": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "प",
+      "lo": "0",
+      "hi": "1",
+      "n": 21
+     }
+    ],
+    "fixed": {},
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "6a5d8a99e7d07df59a01761e60805bb0509f72877c08c55c84cda835e09e56ab",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Hardy-Weinberg heterozygote frequency; axis p"
+  },
+  {
+   "id": "bi-hardyweinberg-doc",
+   "feature": "biology",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् पः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः ३ २ पः सङ्कलनम् २ १ घातः २ ऋणम् १ पः ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् पः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः ३ २ पः सङ्कलनम् २ १ घातः २ ऋणम् १ पः ।\n",
+    "sections": 1
+   },
+   "note": "Hardy-Weinberg heterozygote frequency; document with a definition line"
+  },
+  {
+   "id": "bi-expgrowth-in",
+   "feature": "biology",
+   "req": {
+    "op": "from_input",
+    "input": "N*e^(r*t)",
+    "kind": "plain"
+   },
+   "want": {
+    "ok": true,
+    "sutra": "घातः २ णः घातांकः ळचखस्य घातेन २ तः रः",
+    "declarations": "प्रकरणम् णः ळञख तः ळञख रः ळञख ।",
+    "latex": "N \\cdot e^{t \\cdot r}",
+    "gloss_en": "the product of N and the power, with exponent the product of t and r, of e",
+    "gloss_sa": "णः, (ळचखस्य (तः, रः च — एषां घातः) इत्यनेन घातांकेन घातः) च — एषां घातः",
+    "resolved": [
+     {
+      "identifier": "N",
+      "stem": "ण",
+      "reading": "variable"
+     },
+     {
+      "identifier": "t",
+      "stem": "त",
+      "reading": "variable"
+     },
+     {
+      "identifier": "r",
+      "stem": "र",
+      "reading": "variable"
+     }
+    ],
+    "env": {
+     "ण": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ],
+     "र": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "free": [
+     "N",
+     "t",
+     "r"
+    ]
+   },
+   "note": "Exponential growth"
+  },
+  {
+   "id": "bi-expgrowth-val",
+   "feature": "biology",
+   "req": {
+    "op": "value",
+    "text": "घातः २ णः घातांकः ळचखस्य घातेन २ तः रः",
+    "env": {
+     "ण": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ],
+     "र": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "vals": {
+     "ण": "3",
+     "र": "1/5",
+     "त": "5"
+    },
+    "digits": 30
+   },
+   "want": {
+    "ok": true,
+    "re": "8.15484548537713570608086241406",
+    "im": "0.0",
+    "digits": 30
+   },
+   "note": "Exponential growth; vals={'N': '3', 'r': '1/5', 't': '5'}"
+  },
+  {
+   "id": "bi-expgrowth-smp",
+   "feature": "biology",
+   "req": {
+    "op": "sample",
+    "text": "घातः २ णः घातांकः ळचखस्य घातेन २ तः रः",
+    "env": {
+     "ण": [
+      "var",
+      0,
+      "m"
+     ],
+     "त": [
+      "var",
+      0,
+      "m"
+     ],
+     "र": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "त",
+      "lo": "0",
+      "hi": "10",
+      "n": 21
+     }
+    ],
+    "fixed": {
+     "ण": "3",
+     "र": "1/5"
+    },
+    "complex": false
+   },
+   "want": {
+    "ok": true,
+    "shape": [
+     21
+    ],
+    "re": {
+     "sha256": "0f6e2e43a73313ef7282c7dcc1f034565187d4015942c93850f448182cf01a54",
+     "len": 168
+    },
+    "im": null,
+    "mask": {
+     "sha256": "c90232586b801f9558a76f2f963eccd831d9fe6775e4c8f1446b2331aa2132f2",
+     "len": 21
+    }
+   },
+   "note": "Exponential growth; axis t"
+  },
+  {
+   "id": "bi-expgrowth-doc",
+   "feature": "biology",
+   "req": {
+    "op": "parse",
+    "text": "प्रकरणम् णः ळञख तः ळञख रः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ णः घातांकः ळचखस्य घातेन २ तः रः ।\n"
+   },
+   "want": {
+    "ok": true,
+    "canonical": "प्रकरणम् णः ळञख तः ळञख रः ळञख जजजः ळञख ।\nलक्षणम् जजजः = घातः २ णः घातांकः ळचखस्य घातेन २ तः रः ।\n",
+    "sections": 1
+   },
+   "note": "Exponential growth; document with a definition line"
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "id": "zeta-sphere",
+ "title": "ζ on the Riemann sphere (stereographic)",
+ "view": "sphere",
+ "axes": [
+  {
+   "name": "क",
+   "lo": "-179/2",
+   "hi": "179/2",
+   "n": 180
+  },
+  {
+   "name": "ख",
+   "lo": "-180",
+   "hi": "180",
+   "n": 361
+  }
+ ],
+ "params": null,
+ "extra": {},
+ "env": {
+  "ग": [
+   "var",
+   0,
+   "m"
+  ],
+  "क": [
+   "var",
+   0,
+   "m"
+  ],
+  "ख": [
+   "var",
+   0,
+   "m"
+  ]
+ },
+ "series": [
+  {
+   "label": "ζ on the Riemann sphere (stereographic)",
+   "file": "s0.f64",
+   "mask_file": "s0.mask",
+   "sha256": "ff62b0b62d0c2b3376821147193b0f23b354d05ebd8871401f434352fab55e12",
+   "shape": [
+    180,
+    361
+   ],
+   "sutra": "ळफकः गे",
+   "request": {
+    "op": "sample",
+    "env": {
+     "ग": [
+      "var",
+      0,
+      "m"
+     ],
+     "क": [
+      "var",
+      0,
+      "m"
+     ],
+     "ख": [
+      "var",
+      0,
+      "m"
+     ]
+    },
+    "axes": [
+     {
+      "name": "क",
+      "lo": "-179/2",
+      "hi": "179/2",
+      "n": 180
+     },
+     {
+      "name": "ख",
+      "lo": "-180",
+      "hi": "180",
+      "n": 361
+     }
+    ],
+    "fixed": {},
+    "complex": true,
+    "sphere": "ग"
+   },
+   "im_file": "s0.im.f64",
+   "im_sha256": "af1bcb6b8a51241ef965c01acb95a0d14072ee26b1b6fc2f63b8e5e783f7c945"
+  }
+ ]
+}

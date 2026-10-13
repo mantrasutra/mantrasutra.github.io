@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explorer</title>
+<!-- SPDX-License-Identifier: AGPL-3.0-only -->
+<link rel="stylesheet" href="css/site.css">
+<style>
+:root{--bg:#faf7f0;--fg:#1d1b18;--muted:#6b655c;--line:#d8d1c4;--accent:#a63a21;--panel:#fffdf8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171613;--fg:#ece7dc;--muted:#a39d90;--line:#3a372f;--accent:#e0795f;--panel:#1f1d19}}
+:root[data-theme="dark"]{--bg:#171613;--fg:#ece7dc;--muted:#a39d90;--line:#3a372f;--accent:#e0795f;--panel:#1f1d19}
+*{box-sizing:border-box}
+main{max-width:980px}
+h1{font-size:1.3rem;margin:.2em 0}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
+select,input,textarea,button{font:inherit;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:4px 8px}
+textarea{flex:1 1 220px}
+button{cursor:pointer}
+.stage{aspect-ratio:16/10;width:100%;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+canvas{touch-action:none}
+.probe{min-height:1.6em;font:13px ui-monospace,monospace;color:var(--muted);margin:6px 0}
+.sutra{margin:2px 0;word-break:break-word}
+.note{color:var(--muted);font-size:.9rem}
+@media (max-width:600px){.stage{aspect-ratio:4/5}}
+</style>
+</head>
+<body data-page="explorer"><div id="site-header"></div>
+<main id="main">
+<h1>Explorer</h1>
+<div id="x"></div>
+</main>
+<script type="module">
+import { mountExplorer } from './js/explorer.mjs';
+import { parseCurveQuery } from './js/mantra.mjs';
+const qs = new URLSearchParams(location.search), root = document.getElementById('x');
+const cq = parseCurveQuery(location.search);
+if (cq) {
+  // mantra link: one point per syllable, G=1 L=0; shown as a curve, no engine call
+  const n = cq.values.length, re = Float64Array.from(cq.values), mask = new Uint8Array(n);
+  const axes = [{ name: 'syllable', lo: '0', hi: String(Math.max(n - 1, 1)), n }];
+  const label = cq.label || 'verse weights';
+  mountExplorer(root, { base: 'data', view: 'curve', manifest: { id: 'mantra', view: 'curve', axes, params: null,
+    series: [{ label, sutra: cq.series + '  (G = guru = 1, L = laghu = 0)', ok: true, shape: [n], axes, re, im: null, mask }] } });
+} else if (qs.get('sutra') && qs.get('name')) {
+  // functions page link: live sample of one variable
+  let env = {}; try { env = JSON.parse(qs.get('env') || '{}'); } catch {}
+  const a = { name: qs.get('name'), lo: qs.get('lo') || '-3', hi: qs.get('hi') || '3', n: Number(qs.get('n')) || 201 };
+  mountExplorer(root, { base: 'data', sutra: qs.get('sutra'), env, axes: [a] });
+} else {
+  const id = qs.get('example');
+  mountExplorer(root, { base: 'data', manifest: id ? { id } : undefined });
+}
+</script>
+<div id="site-footer"></div>
+<script type="module" src="js/nav.mjs"></script>
+</body>
+</html>
