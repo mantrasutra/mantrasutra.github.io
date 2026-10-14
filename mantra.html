@@ -26,12 +26,18 @@
   .refusal { color:var(--accent); border:1px solid var(--accent); border-radius:6px; padding:8px; }
   svg { width:100%; max-height:120px; color:var(--accent); border:1px solid var(--line); border-radius:6px; }
 </style>
+<link rel="stylesheet" href="css/history.css">
 </head>
 <body data-page="mantra"><div id="site-header"></div>
-<main id="main"><h1>Mantra</h1><div id="app"></div></main>
+<main id="main"><h1>Mantra</h1><div class="hx-wrap"><div id="app" style="min-width:0"></div><div id="hx"></div></div></main>
 <script type="module">
   import { mountMantra } from './js/mantra.mjs';
-  window.__mantra = mountMantra(document.getElementById('app'));
+  import { mountHistory } from './js/history-ui.mjs';
+  let hx = null, m = null;
+  hx = mountHistory(document.getElementById('hx'), { page: 'mantra',
+    onOpen: (e) => m.setInput(e.input, e.kind), onRerun: (e) => { m.setInput(e.input, e.kind); m.analyse(); } });
+  m = mountMantra(document.getElementById('app'), { onRun: (r) => hx.add(r) });
+  window.__mantra = m; window.__history = hx;
 </script>
 <div id="site-footer"></div>
 <script type="module" src="js/nav.mjs"></script>

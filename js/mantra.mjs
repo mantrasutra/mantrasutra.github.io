@@ -121,7 +121,14 @@ function renderResult(root, res, ctx) {
   out.append(el('p', { className: 'note', textContent: 'L3 sound, L4 numbers and L5 analytic layers: not in v1 UI.' }));
 }
 
-export function mountMantra(root) {
+/** One-line result kept in the history: metre and G/L string, or the refusal. */
+export function summary(res) {
+  if (refusal(res)) return `${res.name}: ${res.why}`;
+  const m = res.verse.metre || {};
+  return `${m.metre || 'metre not identified'} | ${weightString(res.verse)}`;
+}
+
+export function mountMantra(root, { onRun = null } = {}) {
   root.innerHTML = '';
   const sel = el('select', { 'aria-label': 'example' }, el('option', { value: '', textContent: 'Examples (spec-supplied inputs, not a corpus)' }),
     ...EXAMPLES.map((e) => el('option', { value: e.id, textContent: e.title })));
@@ -129,7 +136,7 @@ export function mountMantra(root) {
   const radios = ['dev', 'iast'].map((v) => el('label', {}, el('input', { type: 'radio', name: 'script', value: v, checked: v === 'dev' }), v === 'dev' ? ' Devanagari ' : ' IAST '));
   const go = el('button', { type: 'button', textContent: 'Analyse' });
   const status = el('span', { className: 'note', textContent: 'Loading the engine (about 25 MB, one time)...' });
-  const out = el('div', { 'data-out': '' });
+  const out = el('div'); out.setAttribute('data-out', ''); // was a property, so renderResult never found it
   root.append(el('div', { className: 'row' }, sel, status), ta, el('div', { className: 'row' }, ...radios, go), out);
   const script = () => root.querySelector('input[name="script"]:checked').value;
   let label = '';
@@ -140,7 +147,11 @@ export function mountMantra(root) {
   };
   const run = async () => {
     go.disabled = true; status.textContent = 'Analysing...';
-    try { renderResult(root, await analyseVerse(ta.value, { script: script() }), { label }); status.textContent = 'Done.'; }
+    try {
+      const input = ta.value, sc = script(), res = await analyseVerse(input, { script: sc });
+      renderResult(root, res, { label }); status.textContent = 'Done.';
+      if (onRun) onRun({ input, kind: sc, result: summary(res) });
+    }
     catch (err) { out.replaceChildren(el('div', { className: 'refusal', textContent: String(err) })); status.textContent = ''; }
     go.disabled = false;
   };
@@ -149,5 +160,9 @@ export function mountMantra(root) {
   go.disabled = true;
   const q = new URLSearchParams(location.search);
   if (q.get('text')) { ta.value = q.get('text'); if (q.get('script') === 'iast') root.querySelector('input[value="iast"]').checked = true; go.addEventListener('click', () => {}); }
-  return { analyse: run };
+  return {
+    analyse: run,
+    /** put a saved input back in the box (and its script); the caller then calls analyse() to re-run */
+    setInput(text, sc = 'dev') { ta.value = text; const r = root.querySelector(`input[value="${sc}"]`); if (r) r.checked = true; label = ''; },
+  };
 }

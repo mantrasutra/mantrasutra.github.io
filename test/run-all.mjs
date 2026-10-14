@@ -28,7 +28,7 @@ function canon(x) {
   return x;
 }
 
-export const MODULES = ['core', 'editor', 'packs', 'explorer', 'mantra', 'links'];
+export const MODULES = ['core', 'editor', 'packs', 'explorer', 'mantra', 'links', 'isas-copy', 'history', 'isas-roundtrip', 'history-page'];
 
 async function main() {
   const want = process.argv.slice(2);

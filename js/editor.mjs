@@ -101,6 +101,7 @@ export function mountEditor(root, opts = {}) {
   return {
     setText(s, kind = 'plain') { mode = kind; modeSel.value = kind; input.value = s; clearTimeout(timer); return run(); },
     getParsed() { return parsed; },
+    getInput() { return { text: input.value, kind: mode }; },
     destroy() { destroyed = true; clearTimeout(timer); root.replaceChildren(); },
   };
 }

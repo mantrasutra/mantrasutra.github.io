@@ -26,16 +26,27 @@
   .rendered { font-size:22px; overflow-x:auto; min-height:2em; }
   .refusal { color:var(--bad); font-weight:600; overflow-wrap:anywhere; }
   .note { color:var(--muted); font-size:13px; }
+  main { max-width:1100px; }
+  #app { max-width:none; padding:0; min-width:0; }
 </style>
+<link rel="stylesheet" href="css/history.css">
 </head>
 <body data-page="editor"><div id="site-header"></div>
 <main id="main"><h1>Editor</h1><p class="note" id="status">The engine loads on first use (about 25 MB, once).</p>
-<div id="app"></div></main>
+<p><button type="button" id="hx-add">Add to history</button> <span class="note" id="hx-note"></span></p>
+<div class="hx-wrap"><div id="app"></div><div id="hx"></div></div></main>
 <script type="module">
   import { mountEditor } from './js/editor.mjs';
+  import { mountHistory } from './js/history-ui.mjs';
   const ed = mountEditor(document.getElementById('app'), { onChange: (r) => { document.getElementById('status').textContent = r.ok === false ? 'refused' : 'parsed'; } });
   ed.setText('x^2/(1+e^x)', 'plain');
-  window.__editor = ed;
+  const hx = mountHistory(document.getElementById('hx'), { page: 'editor',
+    onOpen: (e) => ed.setText(e.input, e.kind), onRerun: (e) => ed.setText(e.input, e.kind) });
+  document.getElementById('hx-add').onclick = async () => {
+    const { text, kind } = ed.getInput(), p = ed.getParsed();
+    await hx.add({ input: text, kind, result: p ? (p.canonical ?? p.sutra ?? '') : 'refused' });
+  };
+  window.__editor = ed; window.__history = hx;
 </script>
 <div id="site-footer"></div>
 <script type="module" src="js/nav.mjs"></script>
