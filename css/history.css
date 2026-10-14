@@ -7,8 +7,8 @@
 .hx button:focus-visible, .hx label.hx-btn:focus-within { outline:2px solid var(--accent); outline-offset:1px; }
 .hx-tools { display:flex; flex-wrap:wrap; gap:6px; margin:6px 0; }
 .hx-tools input[type=file] { position:absolute; width:1px; height:1px; opacity:0; }
-.hx ol { list-style:none; margin:0; padding:0; display:grid; gap:6px; }
-.hx li { border:1px solid var(--line); border-radius:6px; padding:6px 8px; background:var(--bg); }
+.hx ol { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:minmax(0,1fr); gap:6px; }
+.hx li { border:1px solid var(--line); border-radius:6px; padding:6px 8px; background:var(--bg); min-width:0; }
 .hx li.on { border-color:var(--accent); }
 .hx li .open { all:unset; display:block; cursor:pointer; width:100%; }
 .hx li .open:focus-visible { outline:2px solid var(--accent); }
